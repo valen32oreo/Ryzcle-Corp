@@ -30,6 +30,7 @@
             <!-- DESKTOP MENU -->
             <ul class="hidden md:flex items-center gap-10 text-sm text-gray-700">
                 <li><a href="index.html" class="hover:text-black transition">Home</a></li>
+                <li><a href="#projects" class="hover:text-black transition">Projects</a></li>
             </ul>
 
             <!-- MOBILE BUTTON -->
@@ -47,6 +48,7 @@
             class="md:hidden bg-white border-t">
             <ul class="flex flex-col px-6 py-6 gap-6 text-gray-700">
                 <li><a @click="open=false" href="index.html">Home</a></li>
+                <li><a @click="open=false" href="#projects">Projects</a></li>
             </ul>
         </div>
     </header>
@@ -70,13 +72,19 @@
 
             <!-- PROJECTS GRID -->
             <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- PROJECT 1 -->
+                <!-- PROJECT 1: Beanology -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                      data-aos="fade-up">
                     <!-- PROJECT IMAGE -->
                     <div class="relative h-64 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
-                            N
+                        <img src="img/Screenshot 2025-11-28 141141.png" 
+                            alt="Beanology Coffee Shop Website"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback jika gambar tidak ada -->
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold"
+                            style="display: none;">
+                            B
                         </div>
                         <span class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
                             Featured
@@ -87,31 +95,32 @@
                     <div class="p-6">
                         <!-- CATEGORY -->
                         <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-semibold mb-3">
-                            Web Development
+                            Coffee Shop Website
                         </span>
 
                         <!-- TITLE -->
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Nexa Platform
+                            Beanology
                         </h3>
 
                         <!-- DESCRIPTION -->
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            A comprehensive SaaS platform for modern business management with AI-powered analytics and automation tools.
+                            A modern coffee shop website designed to highlight brand identity, menu presentation, and store information through a warm yet minimalist user interface.
                         </p>
 
                         <!-- TECHNOLOGIES -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">React</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Node.js</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">MongoDB</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Express</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AWS</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Laravel</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">PHP</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Tailwind</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">CSS</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Bootstrap 5</span>
                         </div>
 
                         <!-- VIEW DETAILS BUTTON -->
                         <div class="pt-4 border-t border-gray-100">
-                            <a href="project-detail.html" 
+                            <a href="project-detail.html?project=beanology" 
                                class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
                                 View Details →
                             </a>
@@ -119,102 +128,18 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 2 -->
+                <!-- PROJECT 2: Valen Gadget Rent -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                      data-aos="fade-up" data-aos-delay="100">
                     <!-- PROJECT IMAGE -->
                     <div class="relative h-64 bg-gradient-to-br from-green-500 to-teal-600 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
-                            Q
-                        </div>
-                    </div>
-
-                    <!-- PROJECT CONTENT -->
-                    <div class="p-6">
-                        <!-- CATEGORY -->
-                        <span class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-semibold mb-3">
-                            Mobile App
-                        </span>
-
-                        <!-- TITLE -->
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Quantum Finance
-                        </h3>
-
-                        <!-- DESCRIPTION -->
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Mobile banking application with advanced security features, real-time tracking, and AI-driven financial insights.
-                        </p>
-
-                        <!-- TECHNOLOGIES -->
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Flutter</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Firebase</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">GraphQL</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Dart</span>
-                        </div>
-
-                        <!-- VIEW DETAILS BUTTON -->
-                        <div class="pt-4 border-t border-gray-100">
-                            <a href="project-detail.html" 
-                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
-                                View Details →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-                     data-aos="fade-up" data-aos-delay="200">
-                    <!-- PROJECT IMAGE -->
-                    <div class="relative h-64 bg-gradient-to-br from-purple-500 to-pink-600 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
-                            A
-                        </div>
-                    </div>
-
-                    <!-- PROJECT CONTENT -->
-                    <div class="p-6">
-                        <!-- CATEGORY -->
-                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-semibold mb-3">
-                            AI & ML
-                        </span>
-
-                        <!-- TITLE -->
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Aura Analytics
-                        </h3>
-
-                        <!-- DESCRIPTION -->
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Machine learning platform for predictive analytics and business intelligence with natural language processing capabilities.
-                        </p>
-
-                        <!-- TECHNOLOGIES -->
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Python</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">TensorFlow</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">FastAPI</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">PyTorch</span>
-                        </div>
-
-                        <!-- VIEW DETAILS BUTTON -->
-                        <div class="pt-4 border-t border-gray-100">
-                            <a href="project-detail.html" 
-                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
-                                View Details →
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 4 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-                     data-aos="fade-up" data-aos-delay="300">
-                    <!-- PROJECT IMAGE -->
-                    <div class="relative h-64 bg-gradient-to-br from-orange-500 to-red-600 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                        <img src="img/Tampilan Awal.png" 
+                            alt="Valen Gadget Rent Website"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback jika gambar tidak ada -->
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold"
+                            style="display: none;">
                             V
                         </div>
                     </div>
@@ -222,30 +147,32 @@
                     <!-- PROJECT CONTENT -->
                     <div class="p-6">
                         <!-- CATEGORY -->
-                        <span class="inline-block px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold mb-3">
-                            E-Commerce
+                        <span class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-semibold mb-3">
+                            Mobile Phone Rental
                         </span>
 
                         <!-- TITLE -->
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Velocity Store
+                            Valen Gadget Rent
                         </h3>
 
                         <!-- DESCRIPTION -->
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            High-performance e-commerce platform with real-time inventory management and personalized shopping experiences.
+                            A web-based gadget rental platform developed with Laravel 11 to manage gadget availability, rental transactions, and user interactions efficiently.
                         </p>
 
                         <!-- TECHNOLOGIES -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Next.js</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Stripe</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">PostgreSQL</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Laravel 11</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">PHP</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Tailwind</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">JavaScript</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">MySQL</span>
                         </div>
 
                         <!-- VIEW DETAILS BUTTON -->
                         <div class="pt-4 border-t border-gray-100">
-                            <a href="project-detail.html" 
+                            <a href="project-detail.html?project=valen-gadget-rent" 
                                class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
                                 View Details →
                             </a>
@@ -253,12 +180,18 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 5 -->
+                <!-- PROJECT 3: Crimson Recoil -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-                     data-aos="fade-up" data-aos-delay="400">
+                     data-aos="fade-up" data-aos-delay="200">
                     <!-- PROJECT IMAGE -->
-                    <div class="relative h-64 bg-gradient-to-br from-indigo-500 to-blue-600 overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                    <div class="relative h-64 bg-gradient-to-br from-purple-500 to-pink-600 overflow-hidden">
+                        <img src="img/CrimsonRecoilScreen.png" 
+                            alt="Crimson Recoil Game"
+                            class="w-full h-full object-cover"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <!-- Fallback jika gambar tidak ada -->
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold"
+                            style="display: none;">
                             C
                         </div>
                     </div>
@@ -266,31 +199,31 @@
                     <!-- PROJECT CONTENT -->
                     <div class="p-6">
                         <!-- CATEGORY -->
-                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-xs font-semibold mb-3">
-                            Cloud Platform
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-semibold mb-3">
+                            Game Development
                         </span>
 
                         <!-- TITLE -->
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Cloud Nexus
+                            Crimson Recoil
                         </h3>
 
                         <!-- DESCRIPTION -->
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            Enterprise cloud management platform with multi-cloud support, automated scaling, and cost optimization.
+                            A fast-paced FPS game set in a dark atmosphere with realistic recoil mechanics, dynamic level progression, and challenging gameplay.
                         </p>
 
                         <!-- TECHNOLOGIES -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Kubernetes</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Docker</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Terraform</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AWS</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">C#</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Unity</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Game Physics</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">3D Design</span>
                         </div>
 
                         <!-- VIEW DETAILS BUTTON -->
                         <div class="pt-4 border-t border-gray-100">
-                            <a href="project-detail.html" 
+                            <a href="project-detail.html?project=crimson-recoil" 
                                class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
                                 View Details →
                             </a>
@@ -298,7 +231,91 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 6 -->
+                <!-- PROJECT 4: Additional Project (Bisa ditambahkan nanti) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up" data-aos-delay="300">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-orange-500 to-red-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            C+
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold mb-3">
+                            Coming Soon
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            New Project
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            A new exciting project is currently in development. Stay tuned for more updates and details about our latest innovation.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">In Development</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Coming Soon</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <span class="text-gray-400 font-semibold text-sm">
+                                Details Coming Soon
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5: Additional Project (Bisa ditambahkan nanti) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up" data-aos-delay="400">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-indigo-500 to-blue-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            P
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-xs font-semibold mb-3">
+                            Planning Stage
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            Future Project
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            We're always working on new ideas and innovations. Check back soon to see what we're building next.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Planning</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Research</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <span class="text-gray-400 font-semibold text-sm">
+                                In Planning Phase
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6: Additional Project (Bisa ditambahkan nanti) -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                      data-aos="fade-up" data-aos-delay="500">
                     <!-- PROJECT IMAGE -->
@@ -306,42 +323,36 @@
                         <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
                             I
                         </div>
-                        <span class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
-                            Featured
-                        </span>
                     </div>
 
                     <!-- PROJECT CONTENT -->
                     <div class="p-6">
                         <!-- CATEGORY -->
                         <span class="inline-block px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-xs font-semibold mb-3">
-                            IoT Solution
+                            Concept
                         </span>
 
                         <!-- TITLE -->
                         <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            IntelliHome
+                            Innovation Project
                         </h3>
 
                         <!-- DESCRIPTION -->
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            Smart home automation system with energy management, security monitoring, and voice control integration.
+                            Exploring new technologies and concepts to create innovative solutions for modern challenges.
                         </p>
 
                         <!-- TECHNOLOGIES -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">IoT</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">MQTT</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">React Native</span>
-                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Raspberry Pi</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Innovation</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Technology</span>
                         </div>
 
                         <!-- VIEW DETAILS BUTTON -->
                         <div class="pt-4 border-t border-gray-100">
-                            <a href="project-detail.html" 
-                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
-                                View Details →
-                            </a>
+                            <span class="text-gray-400 font-semibold text-sm">
+                                Conceptual Stage
+                            </span>
                         </div>
                     </div>
                 </div>
