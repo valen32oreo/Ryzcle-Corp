@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ryzcle Corp. - All Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore all projects from Ryzcle Corp. - A future-focused engineering and technology brand.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AlpineJS for interactivity -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="projects-style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Logo 1-Photoroom.png">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- NAVBAR -->
+    <header
+        x-data="{ open: false, scrolled: false }"
+        x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
+        :class="scrolled ? 'bg-white/80 backdrop-blur border-b' : 'bg-transparent'"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Ryzcle Logo">
+                <span class="font-semibold tracking-wide">Ryzcle Corp.</span>
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <ul class="hidden md:flex items-center gap-10 text-sm text-gray-700">
+                <li><a href="index.html" class="hover:text-black transition">Home</a></li>
+            </ul>
+
+            <!-- MOBILE BUTTON -->
+            <button @click="open = !open" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div x-show="open" x-transition @click.outside="open = false"
+            class="md:hidden bg-white border-t">
+            <ul class="flex flex-col px-6 py-6 gap-6 text-gray-700">
+                <li><a @click="open=false" href="index.html">Home</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="py-32 px-6 bg-gray-50">
+            <!-- SECTION HEADER -->
+            <div class="max-w-7xl mx-auto mb-20 text-center" data-aos="fade-up">
+                <span class="text-sm uppercase tracking-widest text-gray-400">
+                    Our Portfolio
+                </span>
+                <h2 class="mt-4 text-4xl md:text-5xl font-bold text-gray-900">
+                    All Projects
+                </h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore our latest innovations and technology solutions
+                </p>
+            </div>
+
+            <!-- PROJECTS GRID -->
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- PROJECT 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            N
+                        </div>
+                        <span class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                            Featured
+                        </span>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-semibold mb-3">
+                            Web Development
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            Nexa Platform
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            A comprehensive SaaS platform for modern business management with AI-powered analytics and automation tools.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">MongoDB</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Express</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AWS</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="project-detail.html" 
+                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                                View Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up" data-aos-delay="100">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-green-500 to-teal-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            Q
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-semibold mb-3">
+                            Mobile App
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            Quantum Finance
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Mobile banking application with advanced security features, real-time tracking, and AI-driven financial insights.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Flutter</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Firebase</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">GraphQL</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Dart</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="project-detail.html" 
+                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                                View Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up" data-aos-delay="200">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-purple-500 to-pink-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            A
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs font-semibold mb-3">
+                            AI & ML
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            Aura Analytics
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Machine learning platform for predictive analytics and business intelligence with natural language processing capabilities.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Python</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">TensorFlow</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">FastAPI</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">PyTorch</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="project-detail.html" 
+                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                                View Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up" data-aos-delay="300">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-orange-500 to-red-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            V
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-xs font-semibold mb-3">
+                            E-Commerce
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            Velocity Store
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            High-performance e-commerce platform with real-time inventory management and personalized shopping experiences.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Next.js</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Stripe</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">PostgreSQL</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="project-detail.html" 
+                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                                View Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up" data-aos-delay="400">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-indigo-500 to-blue-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            C
+                        </div>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-xs font-semibold mb-3">
+                            Cloud Platform
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            Cloud Nexus
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Enterprise cloud management platform with multi-cloud support, automated scaling, and cost optimization.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Kubernetes</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Docker</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Terraform</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">AWS</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="project-detail.html" 
+                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                                View Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                     data-aos="fade-up" data-aos-delay="500">
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-64 bg-gradient-to-br from-cyan-500 to-blue-500 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
+                            I
+                        </div>
+                        <span class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
+                            Featured
+                        </span>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-6">
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-3 py-1 bg-cyan-100 text-cyan-600 rounded-full text-xs font-semibold mb-3">
+                            IoT Solution
+                        </span>
+
+                        <!-- TITLE -->
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            IntelliHome
+                        </h3>
+
+                        <!-- DESCRIPTION -->
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Smart home automation system with energy management, security monitoring, and voice control integration.
+                        </p>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">IoT</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">MQTT</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">React Native</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">Raspberry Pi</span>
+                        </div>
+
+                        <!-- VIEW DETAILS BUTTON -->
+                        <div class="pt-4 border-t border-gray-100">
+                            <a href="project-detail.html" 
+                               class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                                View Details →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- BACK TO PUBLIC SITE -->
+            <div class="max-w-7xl mx-auto mt-12 text-center">
+                <a href="index.html" 
+                   class="inline-flex items-center text-blue-600 hover:text-blue-700">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                    Back to Main Page
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <!-- GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- BRAND -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/Logo 1-Photoroom.png" class="w-9" alt="Ryzcle Logo">
+                        <img src="images/Logo 2-Photoroom.png" class="w-9" alt="Ryzcle Logo">
+                        <span class="font-semibold text-lg">Ryzcle Corp.</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
+                        Future-focused engineering and technology brand dedicated to building
+                        sustainable and impactful digital solutions.
+                    </p>
+                </div>
+
+                <!-- NAVIGATION -->
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="index.html" class="hover:text-gray-900 transition">Main Page</a></li>
+                        <li><a href="index.html#logo" class="hover:text-gray-900 transition">Logo Meaning</a></li>
+                        <li><a href="projects.html" class="hover:text-gray-900 transition">Projects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Group -->
+                <div>
+                    <h4 class="font-semibold mb-4">Group</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-gray-900 transition">Ryzcle Labs</a></li>
+                        <li><a href="#" class="hover:text-gray-900 transition">Ryzcle Technology</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT / INFO -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li>+62 898 3744 873</li>
+                        <li>
+                            <a href="mailto:ryzclevalencia@gmail.com" class="hover:text-gray-900 transition">
+                                ryzclevalencia@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="mt-16 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+                <p>© 2024 Ryzcle Corp. All rights reserved.</p>
+                <p class="text-xs">
+                    Designed with precision & clarity
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 900 });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
