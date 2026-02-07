@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nexa Platform - Ryzcle Corp.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexa Platform - A comprehensive SaaS platform for modern business management with AI-powered analytics and automation tools.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AlpineJS for interactivity -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="projects-style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Logo 1-Photoroom.png">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- NAVBAR -->
+    <header
+        x-data="{ open: false, scrolled: false }"
+        x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
+        :class="scrolled ? 'bg-white/80 backdrop-blur border-b' : 'bg-transparent'"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- LOGO -->
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Ryzcle Logo">
+                <span class="font-semibold tracking-wide">Ryzcle Corp.</span>
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <ul class="hidden md:flex items-center gap-10 text-sm text-gray-700">
+                <li><a href="index.html" class="hover:text-black transition">Home</a></li>
+                <li><a href="projects.html" class="hover:text-black transition">Projects</a></li>
+            </ul>
+
+            <!-- MOBILE BUTTON -->
+            <button @click="open = !open" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- MOBILE MENU -->
+        <div x-show="open" x-transition @click.outside="open = false"
+            class="md:hidden bg-white border-t">
+            <ul class="flex flex-col px-6 py-6 gap-6 text-gray-700">
+                <li><a @click="open=false" href="index.html">Home</a></li>
+                <li><a @click="open=false" href="projects.html">Projects</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="py-20 px-6 bg-gray-50 min-h-screen">
+            <div class="max-w-5xl mx-auto">
+                
+                <!-- BACK BUTTON -->
+                <a href="projects.html" 
+                   class="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    Back to Projects
+                </a>
+
+                <!-- PROJECT DETAIL -->
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                    
+                    <!-- PROJECT IMAGE -->
+                    <div class="relative h-96 bg-gradient-to-br from-blue-500 to-purple-600 overflow-hidden">
+                        <div class="w-full h-full flex items-center justify-center text-white">
+                            <span class="text-9xl font-bold">N</span>
+                        </div>
+                        
+                        <span class="absolute top-6 right-6 bg-yellow-400 text-gray-900 px-4 py-2 rounded-full text-sm font-bold">
+                            Featured Project
+                        </span>
+                    </div>
+
+                    <!-- PROJECT CONTENT -->
+                    <div class="p-10">
+                        
+                        <!-- CATEGORY -->
+                        <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
+                            Web Development
+                        </span>
+
+                        <!-- TITLE -->
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Nexa Platform
+                        </h1>
+
+                        <!-- META INFO -->
+                        <div class="flex items-center gap-6 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-200">
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                Jan 15, 2024
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                                </svg>
+                                Live Demo • Source Code
+                            </div>
+                        </div>
+
+                        <!-- DESCRIPTION -->
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">About This Project</h2>
+                            <div class="text-gray-700 text-lg leading-relaxed">
+                                <p class="mb-4">
+                                    Nexa Platform is a comprehensive Software-as-a-Service (SaaS) solution designed for modern business management. It integrates various business functions into a single, unified platform, providing companies with the tools they need to streamline operations, enhance productivity, and drive growth.
+                                </p>
+                                <p class="mb-4">
+                                    The platform features AI-powered analytics that provide real-time insights into business performance, customer behavior, and market trends. With advanced automation capabilities, Nexa Platform reduces manual tasks by up to 70%, allowing teams to focus on strategic initiatives rather than administrative work.
+                                </p>
+                                <p class="mb-4">
+                                    Key features include automated reporting, resource allocation optimization, predictive forecasting, and intelligent workflow management. The platform is designed to scale with businesses of all sizes, from startups to enterprise organizations.
+                                </p>
+                                <p>
+                                    Nexa Platform represents a significant leap forward in business management technology, combining powerful features with an intuitive user interface that requires minimal training to master.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- TECHNOLOGIES -->
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Technologies Used</h2>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    React
+                                </span>
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    Node.js
+                                </span>
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    MongoDB
+                                </span>
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    Express
+                                </span>
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    AWS
+                                </span>
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    Docker
+                                </span>
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    Redis
+                                </span>
+                                <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg font-medium text-sm">
+                                    TypeScript
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- KEY FEATURES -->
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4">Key Features</h2>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    AI-Powered Business Analytics
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Automated Workflow Management
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Real-time Performance Dashboards
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Multi-team Collaboration Tools
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Predictive Resource Allocation
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-green-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Customizable Reporting System
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- ACTION BUTTONS -->
+                        <div class="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
+                            <a href="https://demo.nexaplatform.com" 
+                               target="_blank"
+                               class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                                View Live Demo
+                            </a>
+
+                            <a href="https://github.com/ryzcle/nexa-platform" 
+                               target="_blank"
+                               class="inline-flex items-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                                </svg>
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <!-- GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- BRAND -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/Logo 1-Photoroom.png" class="w-9" alt="Ryzcle Logo">
+                        <img src="images/Logo 2-Photoroom.png" class="w-9" alt="Ryzcle Logo">
+                        <span class="font-semibold text-lg">Ryzcle Corp.</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
+                        Future-focused engineering and technology brand dedicated to building
+                        sustainable and impactful digital solutions.
+                    </p>
+                </div>
+
+                <!-- NAVIGATION -->
+                <div>
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="index.html" class="hover:text-gray-900 transition">Main Page</a></li>
+                        <li><a href="index.html#logo" class="hover:text-gray-900 transition">Logo Meaning</a></li>
+                        <li><a href="projects.html" class="hover:text-gray-900 transition">Projects</a></li>
+                    </ul>
+                </div>
+
+                <!-- Group -->
+                <div>
+                    <h4 class="font-semibold mb-4">Group</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-gray-900 transition">Ryzcle Labs</a></li>
+                        <li><a href="#" class="hover:text-gray-900 transition">Ryzcle Technology</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT / INFO -->
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li>+62 898 3744 873</li>
+                        <li>
+                            <a href="mailto:ryzclevalencia@gmail.com" class="hover:text-gray-900 transition">
+                                ryzclevalencia@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="mt-16 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
+                <p>© 2024 Ryzcle Corp. All rights reserved.</p>
+                <p class="text-xs">
+                    Designed with precision & clarity
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 900 });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
