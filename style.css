@@ -1,6 +1,6 @@
-/* =========================
+/*
    BASE / GLOBAL
-   ========================= */
+ */
 html {
     scroll-behavior: smooth;
 }
@@ -16,9 +16,9 @@ body {
     overflow: hidden;
 }
 
-/* =========================
+/*
    LOGO MEANING SECTION
-   ========================= */
+ */
 .logo-meaning {
     padding: 120px clamp(5%, 8vw, 10%);
     display: flex;
@@ -26,9 +26,9 @@ body {
     gap: clamp(80px, 12vw, 160px);
 }
 
-/* =========================
+/*
    ROW LAYOUT (DESKTOP)
-   ========================= */
+ */
 .meaning-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -42,9 +42,9 @@ body {
     grid-template-areas: "text logo";
 }
 
-/* =========================
+/*
    GRID AREAS
-   ========================= */
+ */
 .meaning-logo {
     grid-area: logo;
     display: flex;
@@ -57,17 +57,17 @@ body {
     max-width: 560px;
 }
 
-/* =========================
+/*
    LOGO SIZE
-   ========================= */
+ */
 .meaning-logo img {
     width: 100%;
     max-width: 300px;
 }
 
-/* =========================
+/*
    TEXT
-   ========================= */
+ */
 .meaning-text p {
     font-size: 18px;
     line-height: 1.85;
@@ -83,9 +83,9 @@ body {
     display: block;
 }
 
-/* =========================
+/*
    COLOR DOTS
-   ========================= */
+ */
 .color-dots {
     display: flex;
     gap: clamp(12px, 2vw, 18px);
@@ -108,9 +108,9 @@ body {
 .green-2 { background-color: #85C98D; }
 .green-3 { background-color: #AFFFB0; }
 
-/* =========================
+/*
    DIVIDER LINES
-   ========================= */
+ */
 .divineB {
     width: 300px;
     height: 3px;
@@ -127,9 +127,9 @@ body {
     margin: 26px 0;
 }
 
-/* =========================
+/*
    TABLET (≤ 1024px)
-   ========================= */
+ */
 @media (max-width: 1024px) {
     .logo-meaning {
         padding: 100px 7%;
@@ -151,9 +151,9 @@ body {
     }
 }
 
-/* =========================
+/*
    MOBILE (≤ 768px)
-   ========================= */
+ */
 @media (max-width: 768px) {
     .logo-meaning {
         padding: 80px 6%;
@@ -184,9 +184,9 @@ body {
     }
 }
 
-/* =========================
+/*
    SMALL MOBILE (≤ 480px)
-   ========================= */
+ */
 @media (max-width: 480px) {
     .logo-meaning {
         padding: 56px 5%;
@@ -207,9 +207,9 @@ body {
     }
 }
 
-/* =========================
+/*
    CUSTOM UTILITIES
-   ========================= */
+ */
 .group:hover .group-hover\:translate-x-1 {
     transform: translateX(0.25rem);
 }
