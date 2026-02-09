@@ -322,7 +322,7 @@ body {
 
 /* Warna berbeda untuk Labs vs Tech */
 .labs .division-body li::before {
-  color: #3B82F6; /* Biru Ryzcle Labs */
+  color: #3B82F6; 
 }
 
 .tech .division-body li::before {
