@@ -127,9 +127,7 @@ body {
     margin: 26px 0;
 }
 
-/*
-   TABLET (≤ 1024px)
- */
+/* TABLET (≤ 1024px) */
 @media (max-width: 1024px) {
     .logo-meaning {
         padding: 100px 7%;
