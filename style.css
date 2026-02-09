@@ -290,16 +290,43 @@ body {
   margin-bottom: 1.2rem;
   color: #334155;
   line-height: 1.65;
+  font-size: 1.05rem;
 }
 
+/* LIST STYLING YANG ELEGAN */
 .division-body ul {
-  padding-left: 1rem;
+  list-style: none; /* Nonaktifkan bullet default */
+  padding-left: 0;
+  margin-top: 1.5rem;
 }
 
 .division-body li {
-  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.8rem;
   color: #475569;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Bullet point kustom */
+.division-body li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3B82F6; /* Biru untuk semua, atau sesuaikan */
+  font-size: 1.5rem;
+  line-height: 1;
+  top: -0.1rem;
+}
+
+/* Warna berbeda untuk Labs vs Tech */
+.labs .division-body li::before {
+  color: #3B82F6; /* Biru Ryzcle Labs */
+}
+
+.tech .division-body li::before {
+  color: #10B981; /* Hijau Ryzcle Technology */
 }
 
 /* FOOTER */
