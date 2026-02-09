@@ -320,7 +320,6 @@ body {
   top: -0.1rem;
 }
 
-/* Warna berbeda untuk Labs vs Tech */
 .labs .division-body li::before {
   color: #3B82F6; 
 }
