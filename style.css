@@ -214,7 +214,6 @@ body {
     transform: translateX(0.25rem);
 }
 
-
 .ryzcle-divisions {
   padding: clamp(4rem, 8vw, 6rem) 1rem;
   background: linear-gradient(180deg, #f8fafc, #eef2f7);
