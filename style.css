@@ -314,7 +314,7 @@ body {
   content: "•";
   position: absolute;
   left: 0;
-  color: #3B82F6; /* Biru untuk semua, atau sesuaikan */
+  color: #3B82F6;
   font-size: 1.5rem;
   line-height: 1;
   top: -0.1rem;
