@@ -295,7 +295,7 @@ body {
 
 /* LIST STYLING YANG ELEGAN */
 .division-body ul {
-  list-style: none; /* Nonaktifkan bullet default */
+  list-style: none;
   padding-left: 0;
   margin-top: 1.5rem;
 }
