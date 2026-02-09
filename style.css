@@ -213,3 +213,187 @@ body {
 .group:hover .group-hover\:translate-x-1 {
     transform: translateX(0.25rem);
 }
+
+.divisions-section {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+.section-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Cards Grid */
+.divisions-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.division-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  border-top: 5px solid;
+  display: flex;
+  flex-direction: column;
+}
+.division-labs { border-color: #3b82f6; } /* Biru untuk Labs */
+.division-tech { border-color: #10b981; } /* Hijau untuk Tech */
+
+/* Badge */
+.division-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.division-labs .division-badge { background: #dbeafe; color: #1e40af; }
+.division-tech .division-badge { background: #d1fae5; color: #065f46; }
+
+/* Header (Logo, Nama, Tagline) */
+.division-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.division-logo img {
+  height: 60px;
+  margin-bottom: 1rem;
+}
+.division-header h3 {
+  font-size: 1.8rem;
+  color: #1e293b;
+  margin: 0.5rem 0;
+}
+.division-tagline {
+  font-style: italic;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Konten Inti */
+.division-core {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+.division-core p {
+  margin: 0.5rem 0;
+  color: #475569;
+}
+
+/* Daftar Aktivitas */
+.division-activities {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  flex-grow: 2;
+}
+.division-activities li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4b5563;
+}
+
+/* Output */
+.division-output {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px dashed #cbd5e1;
+}
+
+/* Tombol CTA */
+.division-cta {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-labs {
+  background: #3b82f6;
+  color: white;
+}
+.btn-labs:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+.btn-tech {
+  background: #10b981;
+  color: white;
+}
+.btn-tech:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+.btn-link {
+  display: block;
+  margin-top: 0.8rem;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.btn-link:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* Divider Tengah */
+.division-divider {
+  text-align: center;
+  color: #94a3b8;
+  padding: 1rem;
+}
+.division-divider .arrow {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
+}
+.division-divider p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 768px) {
+  .divisions-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .division-divider {
+    order: -1; /* Pindah ke atas di mobile */
+  }
+  .division-divider .arrow {
+    transform: rotate(90deg); /* Panah mengarah ke bawah */
+  }
+}
