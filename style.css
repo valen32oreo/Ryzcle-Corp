@@ -258,7 +258,9 @@ body {
 
 /* HEAD */
 .division-head {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1.6rem;
 }
 
