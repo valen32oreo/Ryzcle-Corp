@@ -1,17 +1,121 @@
 <!DOCTYPE html>
-<html>
-<head><title>Ryzcle Labs</title></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryzcle Labs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#0f172a;color:#fff;line-height:1.6;}
+header{padding:80px 20px;text-align:center;background:linear-gradient(135deg,#1e3a8a,#2563eb);}
+header h1{font-size:3rem;}
+header p{margin-top:20px;font-size:1.2rem;opacity:0.9;}
+
+section{padding:60px 10%;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:16px;
+transition:0.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+background:#2563eb;
+}
+.card h3{margin-bottom:15px;}
+
+.workflow{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+margin-top:40px;
+}
+.step{
+background:#1e293b;
+padding:20px 30px;
+border-radius:12px;
+}
+
+footer{
+text-align:center;
+padding:40px 20px;
+background:#020617;
+margin-top:50px;
+}
+
+a.btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 25px;
+background:#fff;
+color:#1e3a8a;
+text-decoration:none;
+border-radius:30px;
+font-weight:600;
+transition:0.3s;
+}
+a.btn:hover{background:#e0e7ff;}
+
+@media(max-width:768px){
+header h1{font-size:2rem;}
+section{padding:40px 5%;}
+}
+</style>
+</head>
 <body>
-  <h1>Ryzcle Labs</h1>
-  <p>Divisi riset & inovasi di Ryzcle...</p>
-  <h2>Fokus Utama</h2>
-  <ul>
-    <li>Technology Research & Trend Analysis</li>
-    <li>Concept Validation & Feasibility Study</li>
-    <li>Rapid Prototyping</li>
-    <li>User & Market Research</li>
-  </ul>
-  <h2>Kontak</h2>
-  <p>Email: ryzcle.labs@gmail.com</p>
+
+<header>
+<h1>Ryzcle Labs</h1>
+<p>Research → Validate → Prototype</p>
+<a href="ryzcle-technology.html" class="btn">Explore Ryzcle Technology</a>
+</header>
+
+<section>
+<h2>About Ryzcle Labs</h2>
+<p style="margin-top:20px;max-width:700px;">
+Ryzcle Labs is the research and innovation division of Ryzcle. 
+We explore emerging technologies, validate ideas, and build rapid prototypes 
+before scaling them into real-world products.
+</p>
+</section>
+
+<section>
+<h2>Core Focus</h2>
+<div class="grid">
+<div class="card">
+<h3>Technology Research</h3>
+<p>Analyzing trends and discovering breakthrough opportunities.</p>
+</div>
+<div class="card">
+<h3>Concept Validation</h3>
+<p>Feasibility study and structured idea testing.</p>
+</div>
+<div class="card">
+<h3>Rapid Prototyping</h3>
+<p>Building quick MVPs to test real-world potential.</p>
+</div>
+<div class="card">
+<h3>User & Market Research</h3>
+<p>Understanding real problems before building solutions.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Workflow</h2>
+<div class="workflow">
+<div class="step">1. Research</div>
+<div class="step">2. Validation</div>
+<div class="step">3. Prototype</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Ryzcle Labs — Where ideas get validated.</p>
+</footer>
+
 </body>
 </html>
