@@ -16,9 +16,7 @@ body {
     overflow: hidden;
 }
 
-/*
-   LOGO MEANING SECTION
-*/
+/* LOGO MEANING SECTION */
 .logo-meaning {
     padding: 120px clamp(5%, 8vw, 10%);
     display: flex;
