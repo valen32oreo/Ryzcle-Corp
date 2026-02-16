@@ -26,9 +26,7 @@ body {
     gap: clamp(80px, 12vw, 160px);
 }
 
-/*
-   ROW LAYOUT (DESKTOP)
-*/
+/* ROW LAYOUT (DESKTOP) */
 .meaning-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
