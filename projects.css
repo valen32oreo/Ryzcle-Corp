@@ -112,9 +112,7 @@ body {
     background-color: #1f2937;
 }
 
-/* 
-   RESPONSIVE ADJUSTMENTS
-    */
+/* RESPONSIVE ADJUSTMENTS */
 @media (max-width: 768px) {
     .project-image-container {
         height: 16rem;
