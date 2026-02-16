@@ -81,9 +81,7 @@ body {
     display: block;
 }
 
-/*
-   COLOR DOTS
-*/
+/* COLOR DOTS */
 .color-dots {
     display: flex;
     gap: clamp(12px, 2vw, 18px);
