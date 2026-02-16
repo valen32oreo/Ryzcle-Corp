@@ -42,9 +42,7 @@ body {
     grid-template-areas: "text logo";
 }
 
-/*
-   GRID AREAS
- */
+/* GRID AREAS */
 .meaning-logo {
     grid-area: logo;
     display: flex;
