@@ -81,9 +81,7 @@ body {
     margin-right: 0.5rem;
 }
 
-/* 
-   BUTTON STYLES
-    */
+/* BUTTON STYLES */
 .btn-primary {
     display: inline-flex;
     align-items: center;
