@@ -1,6 +1,6 @@
-/* =========================
+/* 
    BASE / GLOBAL
-   ========================= */
+    */
 html {
     scroll-behavior: smooth;
 }
@@ -16,9 +16,9 @@ body {
     overflow: hidden;
 }
 
-/* =========================
+/* 
    PROJECT CARD STYLES
-   ========================= */
+    */
 .project-card {
     transition: all 0.3s ease;
 }
@@ -28,9 +28,9 @@ body {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================
+/* 
    DETAIL PAGE STYLES
-   ========================= */
+    */
 .project-image-container {
     position: relative;
     height: 24rem;
@@ -46,9 +46,9 @@ body {
     color: white;
 }
 
-/* =========================
+/* 
    TECHNOLOGY TAGS
-   ========================= */
+    */
 .tech-tag {
     padding: 0.25rem 0.5rem;
     background-color: #f3f4f6;
@@ -71,9 +71,9 @@ body {
     font-size: 0.875rem;
 }
 
-/* =========================
+/* 
    FEATURE LIST STYLES
-   ========================= */
+    */
 .feature-list {
     list-style: none;
     padding: 0;
@@ -91,9 +91,9 @@ body {
     margin-right: 0.5rem;
 }
 
-/* =========================
+/* 
    BUTTON STYLES
-   ========================= */
+    */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -124,9 +124,9 @@ body {
     background-color: #1f2937;
 }
 
-/* =========================
+/* 
    RESPONSIVE ADJUSTMENTS
-   ========================= */
+    */
 @media (max-width: 768px) {
     .project-image-container {
         height: 16rem;
@@ -152,9 +152,9 @@ body {
     }
 }
 
-/* =========================
+/* 
    ANIMATION UTILITIES
-   ========================= */
+    */
 .fade-in {
     animation: fadeIn 0.5s ease-in;
 }
@@ -170,9 +170,9 @@ body {
     }
 }
 
-/* =========================
+/* 
    CONTENT STYLES
-   ========================= */
+    */
 .whitespace-pre-line {
     white-space: pre-line;
 }
