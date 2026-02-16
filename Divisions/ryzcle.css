@@ -180,9 +180,7 @@ body {
     }
 }
 
-/*
-   SMALL MOBILE (≤ 480px)
-*/
+/* SMALL MOBILE (≤ 480px) */
 @media (max-width: 480px) {
     .logo-meaning {
         padding: 56px 5%;
