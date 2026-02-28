@@ -1,132 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us — Ryzcle Corp.</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-text {
-            background: linear-gradient(to right, #2563eb, #10b981);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ryzcle Corp</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+    }
+
+    .container-custom {
+        max-width: 1200px;
+        margin: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, #1e3a8a, #2563eb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .section-spacing {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    @media (max-width: 768px) {
+        .section-spacing {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
         }
-    </style>
-    <link rel="icon" type="image/png" href="images/Logo 1-Photoroom.png" alt="Ryzcle Logo">
+    }
+</style>
 </head>
-<body class="bg-white text-gray-900">
 
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-2">
-                <img src="images/Logo 1-Photoroom.png" class="w-7" alt="Logo">
-                <span class="font-bold tracking-tight text-lg">Ryzcle Corp.</span>
-            </a>
-            <div class="space-x-8 text-sm font-medium text-gray-500">
-                <a href="index.html" class="hover:text-black transition">Home</a>
-                <a href="ryzcle-labs.html" class="hover:text-black transition">Labs</a>
-                <a href="ryzcle-technology.html" class="hover:text-black transition">Technology</a>
-            </div>
+<body class="text-gray-900">
+
+<!-- NAVBAR -->
+<nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="container-custom flex items-center justify-between h-16">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="images/Logo 1-Photoroom.png" class="w-7" alt="Ryzcle Logo">
+            <span class="font-semibold tracking-tight text-lg">Ryzcle Corp</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-500">
+            <a href="index.html" class="hover:text-gray-900 transition">Home</a>
+            <a href="ryzcle-labs.html" class="hover:text-gray-900 transition">Labs</a>
+            <a href="ryzcle-technology.html" class="hover:text-gray-900 transition">Technology</a>
         </div>
-    </nav>
 
-    <section class="pt-40 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <span class="text-blue-600 font-semibold tracking-widest uppercase text-xs">Our Story</span>
-            <h1 class="text-5xl md:text-6xl font-extrabold mt-6 mb-8 tracking-tight">
-                Engineering The <span class="gradient-text">Future</span> Through Clarity & Innovation.
-            </h1>
-            <p class="text-xl text-gray-500 leading-relaxed max-w-2xl mx-auto">
-                Ryzcle Corp adalah simbol dari rekayasa masa depan, tempat di mana ide-ide tervalidasi bertemu dengan eksekusi sistem yang presisi.
+        <!-- Mobile Button -->
+        <button id="menuBtn" class="md:hidden">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100 bg-white">
+        <div class="flex flex-col p-6 space-y-4 text-sm text-gray-600">
+            <a href="index.html">Home</a>
+            <a href="ryzcle-labs.html">Labs</a>
+            <a href="ryzcle-technology.html">Technology</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-32 section-spacing">
+    <div class="container-custom text-center max-w-3xl">
+        <span class="text-blue-600 text-xs font-semibold tracking-widest uppercase">
+            Our Philosophy
+        </span>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">
+            Engineering the <span class="gradient-text">Future</span><br>
+            with Clarity & Precision
+        </h1>
+
+        <p class="mt-8 text-lg text-gray-500 leading-relaxed">
+            Ryzcle Corp represents a structured approach to innovation —
+            where validated ideas evolve into scalable systems designed
+            for long-term impact.
+        </p>
+    </div>
+</section>
+
+<!-- IMAGE -->
+<section class="section-spacing pt-0">
+    <div class="container-custom">
+        <img src="images/Company Cover Technology.png"
+            class="w-full h-[300px] md:h-[500px] object-cover rounded-3xl shadow-xl"
+            alt="Ryzcle Vision">
+    </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section-spacing bg-gray-50">
+    <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+
+        <div>
+            <h2 class="text-3xl font-bold mb-6">The Meaning Behind Ryzcle</h2>
+            <p class="text-gray-600 leading-relaxed mb-10">
+                Ryzcle is more than a brand name — it reflects our approach
+                to system engineering. We integrate collaboration,
+                structure, and strategic growth in every solution.
             </p>
-        </div>
-    </section>
 
-    <section class="px-6 mb-32">
-        <div class="max-w-6xl mx-auto" data-aos="zoom-in" data-aos-delay="200">
-            <img src="images/Company Cover Technology.png" class="w-full h-[500px] object-cover rounded-[2.5rem] shadow-2xl" alt="Ryzcle Vision">
-        </div>
-    </section>
-
-    <section class="py-24 bg-gray-50 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-20">
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl font-bold mb-6">Filosofi Ryzcle</h2>
-                    <p class="text-gray-600 leading-relaxed mb-8">
-                        Nama Ryzcle bukan sekadar identitas, melainkan pernyataan tentang standar baru dalam teknologi. Kami menggabungkan dua elemen krusial dalam setiap karya kami:
+            <div class="space-y-8">
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">Unity & Collaboration</h4>
+                    <p class="text-gray-500 text-sm">
+                        Cross-disciplinary thinking to build cohesive and reliable systems.
                     </p>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
-                                <div class="w-3 h-3 bg-blue-600 rounded-full"></div>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Unity & Collaboration (Blue)</h4>
-                                <p class="text-gray-500 text-sm">Menyiratkan keterhubungan dan kolaborasi lintas disiplin untuk memperkuat sistem yang utuh.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center shrink-0">
-                                <div class="w-3 h-3 bg-green-600 rounded-full"></div>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">Growth & Control (Green)</h4>
-                                <p class="text-gray-500 text-sm">Melambangkan kekuatan, pertumbuhan, serta otoritas struktural dalam mengelola sistem yang kompleks.</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="bg-white p-10 rounded-[2rem] border border-gray-100 shadow-sm" data-aos="fade-left">
-                    <h3 class="text-2xl font-bold mb-4">Visi Kami</h3>
-                    <p class="text-gray-500 italic mb-8">"Designing systems today that define tomorrow's technology."</p>
-                    <hr class="mb-8">
-                    <h3 class="text-2xl font-bold mb-4">Misi</h3>
-                    <ul class="space-y-4 text-gray-600">
-                        <li class="flex items-start gap-3">
-                            <span class="text-blue-500 mt-1">✓</span>
-                            <span>Mentransformasi ide mentah menjadi sistem yang siap produksi.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-blue-500 mt-1">✓</span>
-                            <span>Membangun infrastruktur yang skalabel dan reliabel.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-blue-500 mt-1">✓</span>
-                            <span>Menjaga keberlanjutan teknologi dalam jangka panjang.</span>
-                        </li>
-                    </ul>
+
+                <div>
+                    <h4 class="font-semibold text-lg mb-2">Growth & Structural Control</h4>
+                    <p class="text-gray-500 text-sm">
+                        Long-term scalability with strategic system governance.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="py-32 px-6">
-        <div class="max-w-6xl mx-auto text-center mb-16">
-            <h2 class="text-3xl font-bold" data-aos="fade-up">Dua Divisi, Satu Tujuan</h2>
+        <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
+            <h3 class="text-2xl font-bold mb-6">Vision</h3>
+            <p class="italic text-gray-500 mb-10">
+                "Designing systems today that define tomorrow’s technology."
+            </p>
+
+            <h3 class="text-2xl font-bold mb-6">Mission</h3>
+            <ul class="space-y-4 text-gray-600">
+                <li>• Transforming raw ideas into production-ready systems.</li>
+                <li>• Building scalable and resilient infrastructure.</li>
+                <li>• Ensuring technological sustainability for the long term.</li>
+            </ul>
         </div>
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <a href="ryzcle-labs.html" class="group p-8 bg-white border border-gray-200 rounded-3xl hover:border-blue-500 transition-all" data-aos="fade-up">
-                <img src="images/Logo 1-Photoroom.png" class="w-10 mb-6 group-hover:scale-110 transition" alt="Labs">
-                <h3 class="text-xl font-bold mb-2">Ryzcle Labs</h3>
-                <p class="text-gray-500 text-sm">Fokus pada riset, validasi konsep, dan pembuatan prototipe inovatif.</p>
-            </a>
-            <a href="ryzcle-technology.html" class="group p-8 bg-white border border-gray-200 rounded-3xl hover:border-green-500 transition-all" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/Logo 2-Photoroom.png" class="w-10 mb-6 group-hover:scale-110 transition" alt="Tech">
-                <h3 class="text-xl font-bold mb-2">Ryzcle Technology</h3>
-                <p class="text-gray-500 text-sm">Fokus pada pengembangan perangkat lunak, arsitektur skalabel, dan deployment.</p>
-            </a>
-        </div>
-    </section>
 
-    <footer class="py-12 border-t border-gray-100 text-center text-sm text-gray-400">
-        <p>© 2026 Ryzcle Corp. Future Crafted.</p>
-    </footer>
+    </div>
+</section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+<!-- DIVISIONS -->
+<section class="section-spacing">
+    <div class="container-custom text-center mb-16">
+        <h2 class="text-3xl font-bold">Two Divisions, One Standard</h2>
+    </div>
+
+    <div class="container-custom grid md:grid-cols-2 gap-8">
+
+        <a href="ryzcle-labs.html"
+            class="group p-10 bg-white border border-gray-200 rounded-3xl hover:shadow-lg transition">
+
+            <h3 class="text-xl font-bold mb-4">Ryzcle Labs</h3>
+            <p class="text-gray-500 text-sm">
+                Research, concept validation, and innovation prototyping.
+            </p>
+        </a>
+
+        <a href="ryzcle-technology.html"
+            class="group p-10 bg-white border border-gray-200 rounded-3xl hover:shadow-lg transition">
+
+            <h3 class="text-xl font-bold mb-4">Ryzcle Technology</h3>
+            <p class="text-gray-500 text-sm">
+                Software engineering, scalable architecture, and deployment systems.
+            </p>
+        </a>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 border-t border-gray-100 text-center text-sm text-gray-400">
+    © 2026 Ryzcle Corp. All rights reserved.
+</footer>
+
+<script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
+
 </body>
 </html>
