@@ -1,162 +1,123 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Ryzcle Corp</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryzcle Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
 
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8fafc;
-  }
-
-  .font-headline { font-family: 'Space Grotesk', sans-serif; }
-
-  .bg-light-grid {
-    background-image:
-      radial-gradient(#e2e8f0 1px, transparent 1px),
-      radial-gradient(#e2e8f0 1px, transparent 1px);
-    background-size: 24px 24px;
-    background-position: 0 0, 12px 12px;
-  }
-</style>
+    /* Background grid */
+    .bg-grid {
+      background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
 </head>
+<body class="bg-white text-slate-800">
 
-<body class="bg-light-grid overflow-x-hidden">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
 
-<!-- NAVBAR -->
-<nav class="sticky top-0 bg-white/80 backdrop-blur-lg border-b border-slate-200 z-50">
-  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-    
-    <a href="./index.html" class="flex items-center gap-3">
-      <img src="./images/Logo 1-Photoroom.png" class="w-8 h-8 object-contain" alt="Logo">
-      <span class="font-headline text-lg sm:text-xl font-bold text-slate-800">
-        Ryzcle Corp.
-      </span>
-    </a>
+        <div class="flex items-center gap-3">
+          <img src="logo.png" class="h-8 w-8 object-contain" />
+          <span class="font-semibold text-lg">Ryzcle Corp.</span>
+        </div>
 
-    <div class="hidden md:flex gap-6 lg:gap-10 text-sm font-semibold text-slate-600">
-      <a href="./index.html" class="hover:text-blue-600 transition">Beranda</a>
-      <a href="#" class="text-blue-600 font-bold">Tentang</a>
+        <nav class="hidden md:flex gap-8 text-sm font-medium">
+          <a href="#" class="hover:text-blue-600 transition">Beranda</a>
+          <a href="#" class="text-blue-600">Tentang</a>
+        </nav>
+
+      </div>
     </div>
+  </header>
 
-  </div>
-</nav>
+  <!-- HERO SECTION -->
+  <section class="relative bg-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
 
-<!-- HERO -->
-<section class="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 text-center">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="font-headline font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight">
-      Tentang <span class="text-blue-600">Ryzcle Corp</span>
-    </h1>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
 
-    <p class="mt-6 text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed">
-      Kami membangun ekosistem digital melalui presisi engineering,
-      kreativitas berkelanjutan, dan fondasi teknologi yang mampu
-      tumbuh bersama masa depan.
-    </p>
-  </div>
-</section>
+        <!-- Logo / Image -->
+        <div class="flex justify-center md:justify-start">
+          <div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-white shadow-xl flex items-center justify-center">
+            <img src="logo.png" class="w-32 md:w-40 object-contain" />
+          </div>
+        </div>
 
-<!-- WHO WE ARE -->
-<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Text -->
+        <div class="text-center md:text-left">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            Krisna Valencia Hidayat
+          </h1>
 
-    <div>
-      <img src="./images/Company Cover Technology.png"
-           class="w-full rounded-3xl shadow-xl object-cover"
-           alt="Company">
+          <p class="mt-4 text-base sm:text-lg text-slate-600 max-w-xl mx-auto md:mx-0">
+            Founder & CEO Ryzcle Corp. Berfokus pada AI engineering,
+            system architecture, dan pengembangan produk digital berkelanjutan.
+          </p>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div>
-      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
-        Siapa Itu Ryzcle?
+  <!-- ABOUT SECTION -->
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+        Tentang <span class="text-blue-600">Ryzcle Corp</span>
       </h2>
-      <p class="text-slate-600 leading-relaxed text-sm sm:text-base md:text-lg">
-        Ryzcle adalah entitas teknologi yang berfokus pada pengembangan
-        sistem digital scalable, riset inovatif, dan arsitektur
-        yang dirancang untuk pertumbuhan jangka panjang.
+
+      <p class="mt-6 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto">
+        Kami membangun ekosistem digital melalui presisi engineering,
+        kreativitas berkelanjutan, dan fondasi teknologi yang mampu
+        tumbuh bersama masa depan.
       </p>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- WHO IS RYZCLE -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-<!-- VALUES -->
-<section class="bg-white/60 border-y border-slate-200 py-16 sm:py-20">
-  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-2xl sm:text-3xl font-semibold">
+            Siapa Itu Ryzcle?
+          </h3>
 
-      <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-        <h3 class="font-headline text-xl font-bold mb-4 text-slate-900">Visi</h3>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Menciptakan standar baru dalam engineering modern.
-        </p>
-      </div>
+          <p class="mt-4 text-slate-600 text-base sm:text-lg">
+            Ryzcle adalah entitas teknologi yang berfokus pada pengembangan
+            sistem digital scalable, riset inovatif, dan arsitektur
+            berkelanjutan yang dirancang untuk masa depan.
+          </p>
+        </div>
 
-      <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-        <h3 class="font-headline text-xl font-bold mb-4 text-slate-900">Misi</h3>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Mengakselerasi transformasi ide menjadi produk nyata.
-        </p>
-      </div>
+        <div class="flex justify-center">
+          <div class="w-full max-w-md h-60 bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl shadow-xl"></div>
+        </div>
 
-      <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-        <h3 class="font-headline text-xl font-bold mb-4 text-slate-900">Keunggulan</h3>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Sistem scalable, aman, dan berorientasi UX.
-        </p>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOUNDER -->
-<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-    <div class="flex justify-center md:justify-start">
-      <img src="./images/Logo 1-Photoroom.png"
-           class="w-48 sm:w-60 md:w-72 rounded-full shadow-xl"
-           alt="Founder">
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
+      © 2026 Ryzcle Corp. All rights reserved.
     </div>
-
-    <div class="text-center md:text-left">
-      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-slate-900">
-        Krisna Valencia Hidayat
-      </h2>
-      <p class="text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed">
-        Founder & CEO Ryzcle Corp. Berfokus pada AI engineering,
-        system architecture, dan pengembangan produk digital
-        berkelanjutan.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="bg-blue-600 text-white py-16 sm:py-20 text-center px-4 sm:px-6 lg:px-8">
-  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-    Bangun Masa Depan Bersama Kami
-  </h2>
-  <a href="./ryzcle-technology.html"
-     class="inline-block px-8 py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition">
-     Jelajahi Divisi
-  </a>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-8 text-center text-sm text-slate-500 px-4">
-  © 2026 Ryzcle Corp. All rights reserved.
-</footer>
+  </footer>
 
 </body>
 </html>
