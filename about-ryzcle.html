@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami — Ryzcle Corp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+        }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        
+        /* Smooth Background Grid */
+        .bg-dot-pattern {
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        /* Gradient Animation */
+        .animate-gradient {
+            background: linear-gradient(-45deg, #2563eb, #10b981, #3b82f6, #059669);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="antialiased bg-slate-50/50">
+
+    <div class="fixed inset-0 -z-10 bg-dot-pattern opacity-60"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 -z-10 w-full max-w-6xl h-full opacity-30 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-200 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[10%] right-[-10%] w-96 h-96 bg-emerald-100 rounded-full blur-[120px]"></div>
+    </div>
+
+    <nav class="sticky top-0 z-50 w-full border-b bg-white/70 backdrop-blur-xl">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <img src="../images/Logo 1-Photoroom.png" class="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" alt="Ryzcle Logo">
+                <span class="font-headline text-xl font-bold tracking-tight text-slate-800">Ryzcle Corp.</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-500">
+                <a href="../index.html" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="ryzcle-labs.html" class="hover:text-blue-600 transition">Labs</a>
+                <a href="ryzcle-technology.html" class="hover:text-blue-600 transition">Technology</a>
+                <a href="#" class="text-blue-600 px-4 py-2 bg-blue-50 rounded-full">Tentang</a>
+            </div>
+            <button class="md:hidden text-slate-800">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="relative pt-20 pb-16 px-6 overflow-hidden">
+            <div class="container mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wider mb-8" data-aos="fade-down">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    </span>
+                    The Future of Engineering
+                </div>
+                <h1 class="font-headline text-5xl md:text-7xl font-bold text-slate-900 mb-8 tracking-tight max-w-5xl mx-auto leading-[1.1]" data-aos="fade-up">
+                    Membangun <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">Ekosistem Digital</span> yang Berkelanjutan.
+                </h1>
+                <p class="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="100">
+                    Ryzcle Corp mendefinisikan ulang cara teknologi dibangun melalui pendekatan presisi, validasi riset, dan skalabilitas infrastruktur.
+                </p>
+                <div class="flex justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-emerald-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                        <img src="../images/Company Cover Technology.png" alt="Ryzcle Hero" class="relative rounded-3xl w-full max-w-4xl shadow-2xl border border-white/50">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 bg-white/50 border-y border-slate-200">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-3xl glass-card transition-transform hover:-translate-y-2" data-aos="fade-up">
+                        <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor font-bold">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9s2.015-9 4.5-9" />
+                            </svg>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3">Visi Global</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Membangun standar baru dalam rekayasa perangkat lunak yang berfokus pada pengalaman pengguna dan efisiensi sistem.</p>
+                    </div>
+                    
+                    <div class="p-8 rounded-3xl glass-card transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-12 h-12 bg-emerald-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-emerald-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3">Eksekusi Cepat</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Kami memangkas jarak antara ide dan realitas melalui alur kerja DevOps yang terautomasi dan pengembangan yang iteratif.</p>
+                    </div>
+
+                    <div class="p-8 rounded-3xl glass-card transition-transform hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.744c0 3.89 2.367 7.229 5.765 8.659a11.954 11.954 0 0012.47 0c3.398-1.43 5.765-4.769 5.765-8.659a11.991 11.991 0 00-.598-3.744A11.959 11.959 0 0112 2.714z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold mb-3">Keamanan Maksimal</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Setiap produk Ryzcle dibangun dengan lapisan keamanan enterprise untuk menjamin integritas data dan kepercayaan pengguna.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="flex flex-col md:flex-row gap-16 items-center">
+                    <div class="w-full md:w-1/2 space-y-8" data-aos="fade-right">
+                        <div class="space-y-4">
+                            <h2 class="font-headline text-4xl font-bold tracking-tight">Kisah di Balik <span class="text-blue-600">Nama</span></h2>
+                            <p class="text-slate-600 text-lg leading-relaxed">
+                                Ryzcle bukan sekadar merek; itu adalah metodologi. Diambil dari semangat untuk **Rise** (Bangkit) dan **Cycle** (Siklus), kami percaya bahwa teknologi adalah proses perbaikan yang terus-menerus.
+                            </p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="flex items-center gap-6 p-6 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                                <img src="../images/Blue Meaning.png" class="w-16 h-16 object-contain" alt="Collaboration">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Blue Identity</h4>
+                                    <p class="text-slate-500 text-sm">Melambangkan kolaborasi lintas batas dan ketenangan dalam memecahkan masalah kompleks.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-6 p-6 rounded-2xl bg-white border border-slate-100 shadow-sm">
+                                <img src="../images/Green Meaning.png" class="w-16 h-16 object-contain" alt="Growth">
+                                <div>
+                                    <h4 class="font-bold text-slate-800">Green Identity</h4>
+                                    <p class="text-slate-500 text-sm">Otoritas struktural, stabilitas sistem, dan pertumbuhan organik yang berkelanjutan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2" data-aos="fade-left">
+                        <div class="relative">
+                            <div class="absolute inset-0 animate-gradient rounded-[2.5rem] blur-2xl opacity-10"></div>
+                            <div class="relative bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-xl">
+                                <blockquote class="text-2xl font-medium text-slate-800 italic leading-relaxed mb-8">
+                                    "Designing systems today that define tomorrow's technology."
+                                </blockquote>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+                                        <img src="../images/Logo 1-Photoroom.png" alt="Ryzcle Icon" class="p-2">
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-900">Ryzcle Executive Board</p>
+                                        <p class="text-sm text-slate-500">Corporate Philosophy</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-6">
+            <div class="container mx-auto max-w-5xl">
+                <div class="animate-gradient p-[1px] rounded-[3rem] shadow-2xl shadow-blue-200">
+                    <div class="bg-slate-900 rounded-[3rem] px-8 py-16 md:py-24 text-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-[80px]"></div>
+                        <div class="relative z-10 space-y-8">
+                            <h2 class="font-headline text-3xl md:text-5xl font-bold text-white tracking-tight">Mulai Perjalanan Anda Bersama Kami</h2>
+                            <p class="text-slate-400 text-lg max-w-xl mx-auto">Jelajahi bagaimana divisi kami dapat mengakselerasi ide teknologi Anda menjadi sistem yang matang.</p>
+                            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                                <a href="ryzcle-technology.html" class="px-10 py-4 bg-white text-slate-900 rounded-full font-bold hover:bg-slate-100 transition shadow-lg">Divisi Technology</a>
+                                <a href="ryzcle-labs.html" class="px-10 py-4 bg-transparent border border-white/20 text-white rounded-full font-bold hover:bg-white/5 transition">Eksplorasi Labs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 px-6 border-t border-slate-200 bg-white">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <img src="../images/Logo 1-Photoroom.png" class="w-6 opacity-40 grayscale" alt="Footer Logo">
+                <span class="font-headline font-bold text-slate-400 tracking-widest text-sm uppercase">Ryzcle Corp.</span>
+            </div>
+            <p class="text-slate-400 text-xs">© 2026 Ryzcle Corp. Crafting sustainable future through engineering.</p>
+            <div class="flex gap-6 text-slate-400">
+                <a href="#" class="hover:text-blue-600 transition underline underline-offset-4">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-600 transition underline underline-offset-4">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+</body>
+</html>
