@@ -15,16 +15,17 @@
     background-color: #f8fafc;
   }
 
-  .font-headline { 
+  .font-headline {
     font-family: 'Space Grotesk', sans-serif;
   }
 
+  /* Square Grid Background */
   .bg-light-grid {
     background-image:
-        linear-gradient(to right, rgba(226,232,240,0.6) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(226,232,240,0.6) 1px, transparent 1px);
+      linear-gradient(to right, rgba(226,232,240,0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(226,232,240,0.6) 1px, transparent 1px);
     background-size: 48px 48px;
-    }
+  }
 </style>
 </head>
 
@@ -50,7 +51,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8 text-center">
+<section class="py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 text-center">
   <div class="max-w-4xl mx-auto">
     <h1 class="font-headline font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 leading-tight">
       Tentang <span class="text-blue-600">Ryzcle Corp</span>
@@ -65,12 +66,12 @@
 </section>
 
 <!-- WHO WE ARE -->
-<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+<section class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
     <div>
       <img src="./images/Company Cover Technology.png"
-           class="w-full rounded-3xl shadow-xl object-cover"
+           class="w-full rounded-3xl object-cover"
            alt="Company">
     </div>
 
@@ -88,51 +89,52 @@
   </div>
 </section>
 
-<!-- VALUES -->
-<section class="bg-white/60 border-y border-slate-200 py-16 sm:py-20">
+<!-- VALUES (NO CARD VERSION) -->
+<section class="py-20 border-y border-slate-200">
   <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
 
-      <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-        <h3 class="font-headline text-xl font-bold mb-4 text-slate-900">Visi</h3>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Menciptakan standar baru dalam engineering modern.
+      <div>
+        <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-900 mb-4">
+          Visi
+        </h3>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Menciptakan standar baru dalam engineering modern melalui sistem yang presisi dan scalable.
         </p>
       </div>
 
-      <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-        <h3 class="font-headline text-xl font-bold mb-4 text-slate-900">Misi</h3>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Mengakselerasi transformasi ide menjadi produk nyata.
+      <div>
+        <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-900 mb-4">
+          Misi
+        </h3>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Mengakselerasi transformasi ide menjadi produk nyata yang memiliki fondasi arsitektur kuat.
         </p>
       </div>
 
-      <div class="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-        <h3 class="font-headline text-xl font-bold mb-4 text-slate-900">Keunggulan</h3>
-        <p class="text-slate-600 text-sm sm:text-base">
-          Sistem scalable, aman, dan berorientasi UX.
+      <div>
+        <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-900 mb-4">
+          Keunggulan
+        </h3>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Sistem scalable, aman, modular, dan berorientasi pada pengalaman pengguna.
         </p>
       </div>
 
     </div>
+
   </div>
 </section>
 
 <!-- FOUNDER SECTION -->
-<section class="relative py-20 bg-white">
+<section class="py-24">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
-  <!-- Background Grid -->
-  <div class="absolute inset-0 -z-10 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <div class="grid lg:grid-cols-2 gap-16 items-start">
-
-      <!-- LEFT: IMAGE GRID -->
+      <!-- LEFT IMAGES -->
       <div class="space-y-6">
-
-        <!-- Top 2 Images -->
         <div class="grid grid-cols-2 gap-6">
           <img src="images/Portfolio 1.0.PNG"
                class="rounded-3xl object-cover w-full h-56 sm:h-64 md:h-72"
@@ -143,17 +145,14 @@
                alt="Founder 2">
         </div>
 
-        <!-- Bottom Full Image -->
         <img src="images/Portfolio 1.0.PNG"
              class="rounded-3xl object-cover w-full h-64 sm:h-72 md:h-80"
              alt="Founder 3">
-
       </div>
 
-      <!-- RIGHT: TEXT CONTENT -->
-      <div class="text-left">
-
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
+      <!-- RIGHT TEXT -->
+      <div>
+        <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
           Krisna Valencia Hidayat
         </h2>
 
@@ -170,13 +169,11 @@
           menciptakan fondasi teknologi yang dapat berkembang bersama masa depan.
         </p>
 
-        <!-- Optional Social Icons -->
-        <div class="flex gap-6 mt-8 text-slate-500">
+        <div class="flex gap-8 mt-10 text-sm font-medium text-slate-500">
           <a href="#" class="hover:text-blue-600 transition">GitHub</a>
           <a href="#" class="hover:text-blue-600 transition">LinkedIn</a>
           <a href="#" class="hover:text-blue-600 transition">Website</a>
         </div>
-
       </div>
 
     </div>
@@ -185,8 +182,8 @@
 </section>
 
 <!-- CTA -->
-<section class="bg-blue-600 text-white py-16 sm:py-20 text-center px-4 sm:px-6 lg:px-8">
-  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+<section class="bg-blue-600 text-white py-20 text-center px-4 sm:px-6 lg:px-8">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-8">
     Bangun Masa Depan Bersama Kami
   </h2>
   <a href="./ryzcle-technology.html"
@@ -196,7 +193,7 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="py-8 text-center text-sm text-slate-500 px-4">
+<footer class="py-10 text-center text-sm text-slate-500 px-4">
   © 2026 Ryzcle Corp. All rights reserved.
 </footer>
 
