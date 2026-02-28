@@ -1,142 +1,172 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Learniverse</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ryzcle Corp.</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a0a;
+}
+.grid-bg {
+    background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+</style>
 </head>
 
-<body class="bg-black text-white relative overflow-x-hidden">
+<body class="text-white relative overflow-x-hidden">
 
-  <!-- Background Grid -->
-  <div class="absolute inset-0 -z-10">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.25),transparent_50%)]"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-  </div>
+<!-- Background Glow -->
+<div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500 opacity-20 blur-[200px] rounded-full"></div>
+<div class="absolute top-[300px] left-[-200px] w-[600px] h-[600px] bg-indigo-500 opacity-20 blur-[180px] rounded-full"></div>
 
-  <!-- Navbar -->
-  <header class="fixed top-0 w-full backdrop-blur-md bg-black/40 border-b border-white/10 z-50">
+<div class="grid-bg absolute inset-0 pointer-events-none"></div>
+
+<!-- Navbar -->
+<header class="sticky top-0 backdrop-blur-xl bg-black/30 border-b border-white/10 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-lg font-semibold tracking-wide">Learniverse</h1>
-      <nav class="space-x-6 text-sm text-gray-300">
-        <a href="#" class="hover:text-white transition">Home</a>
-        <a href="#" class="hover:text-white transition">Product</a>
-        <a href="#" class="hover:text-white transition">About</a>
-      </nav>
+        <h1 class="text-lg font-semibold tracking-wide">RYZCLE</h1>
+        <nav class="space-x-6 text-sm text-gray-300">
+            <a href="#" class="hover:text-white transition">Home</a>
+            <a href="#" class="hover:text-white transition">Divisions</a>
+            <a href="#" class="text-white font-medium">About</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <!-- HERO -->
-  <section class="min-h-screen flex items-center justify-center px-6 pt-32">
-    <div class="text-center max-w-4xl">
-      <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-        Reimagining Research  
-        <span class="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
-          With AI Precision
+<!-- Hero -->
+<section class="relative max-w-5xl mx-auto px-6 pt-28 pb-20 text-center">
+    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">
+        Engineering The Future  
+        <span class="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            Through Innovation
         </span>
-      </h2>
-      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
-        Learniverse is an AI-powered learning and research ecosystem designed 
-        to accelerate knowledge discovery, structured thinking, and academic excellence.
-      </p>
-    </div>
-  </section>
+    </h2>
 
-  <!-- MISSION -->
-  <section class="py-24 px-6 border-t border-white/10">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <h3 class="text-3xl font-bold mb-6">Our Mission</h3>
-        <p class="text-gray-400 leading-relaxed">
-          We believe intelligence should be amplified, not replaced. 
-          Learniverse empowers students, researchers, and innovators 
-          with AI tools that structure ideas, refine thinking, 
-          and generate high-quality academic output.
+    <p class="mt-6 text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+        Ryzcle Corp. is a technology holding company focused on building 
+        scalable digital products, research initiatives, and AI-driven platforms 
+        designed for the next generation.
+    </p>
+</section>
+
+<!-- Vision & Manifesto -->
+<section class="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
+    <div>
+        <h3 class="text-3xl font-bold mb-6">Our Vision</h3>
+        <p class="text-gray-400 leading-relaxed mb-6">
+            We believe technology should not only solve problems — 
+            it should create opportunities. Ryzcle was founded with a mission 
+            to design systems that empower creators, students, and businesses.
         </p>
-      </div>
-      <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-lg">
-        <h4 class="font-semibold mb-4 text-blue-400">Core Principles</h4>
-        <ul class="space-y-3 text-gray-400 text-sm">
-          <li>• Ethical AI Integration</li>
-          <li>• Structured Knowledge Systems</li>
-          <li>• Academic Integrity</li>
-          <li>• Research Acceleration</li>
+        <p class="text-gray-400 leading-relaxed">
+            From AI research to full-stack engineering, we craft products 
+            with long-term impact and thoughtful architecture.
+        </p>
+    </div>
+
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-xl">
+        <h4 class="text-xl font-semibold mb-4">Core Principles</h4>
+        <ul class="space-y-4 text-gray-300 text-sm">
+            <li>⚡ Engineering Excellence</li>
+            <li>🧠 AI-First Approach</li>
+            <li>🔬 Research & Innovation</li>
+            <li>🚀 Scalable Architecture</li>
+            <li>🎯 Purpose-Driven Development</li>
         </ul>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- DIFFERENT -->
-  <section class="py-24 px-6 border-t border-white/10">
-    <div class="max-w-6xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-16">What Makes Learniverse Different</h3>
+<!-- Divisions Preview -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-16">Our Divisions</h3>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-blue-500 transition">
-          <h4 class="font-semibold mb-4">AI Research Engine</h4>
-          <p class="text-gray-400 text-sm">
-            Advanced AI processing that structures raw ideas into formal academic formats.
-          </p>
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-blue-400/40 transition">
+            <h4 class="text-xl font-semibold mb-3">Ryzcle Labs</h4>
+            <p class="text-gray-400 text-sm">
+                Research-driven innovation unit focused on AI systems, 
+                experimental technologies, and next-gen digital solutions.
+            </p>
         </div>
 
-        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-blue-500 transition">
-          <h4 class="font-semibold mb-4">Structured Thinking System</h4>
-          <p class="text-gray-400 text-sm">
-            Built-in frameworks to transform brainstorming into logical academic flow.
-          </p>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-indigo-400/40 transition">
+            <h4 class="text-xl font-semibold mb-3">Ryzcle Digital</h4>
+            <p class="text-gray-400 text-sm">
+                Product development division specializing in web platforms, 
+                SaaS tools, and enterprise-grade applications.
+            </p>
         </div>
 
-        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-blue-500 transition">
-          <h4 class="font-semibold mb-4">Future Academic Ecosystem</h4>
-          <p class="text-gray-400 text-sm">
-            Designed to integrate citations, verification systems, and collaborative AI workflows.
-          </p>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8 hover:border-purple-400/40 transition">
+            <h4 class="text-xl font-semibold mb-3">Ryzcle Creative</h4>
+            <p class="text-gray-400 text-sm">
+                Branding, design systems, and digital experiences 
+                crafted with precision and clarity.
+            </p>
         </div>
-      </div>
+
     </div>
-  </section>
+</section>
 
-  <!-- FOUNDER -->
-  <section class="py-24 px-6 border-t border-white/10">
-    <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-12">Behind Learniverse</h3>
+<!-- Founder Section -->
+<section class="max-w-6xl mx-auto px-6 py-24 border-t border-white/10">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
 
-      <div class="bg-white/5 border border-white/10 rounded-2xl p-10 backdrop-blur-lg">
-        <h4 class="text-xl font-semibold mb-4">Krisna Valencia Hidayat</h4>
-        <p class="text-gray-400 leading-relaxed">
-          A technology enthusiast and visionary founder committed to building 
-          intelligent systems that elevate human capability. 
-          Learniverse was born from the desire to bridge AI and academic research 
-          into a unified, ethical ecosystem.
-        </p>
-      </div>
+        <div>
+            <img src="https://via.placeholder.com/500x600" 
+                 class="rounded-2xl border border-white/10 shadow-xl" 
+                 alt="Founder Image">
+        </div>
+
+        <div>
+            <h3 class="text-3xl font-bold mb-6">Behind The Vision</h3>
+            <p class="text-gray-400 leading-relaxed mb-6">
+                Ryzcle was founded by Krisna Valencia Hidayat, 
+                a computer science student and independent developer 
+                driven by long-term innovation and scalable systems thinking.
+            </p>
+            <p class="text-gray-400 leading-relaxed">
+                His focus lies in AI engineering, product architecture, 
+                and building digital ecosystems that stand the test of time.
+            </p>
+
+            <div class="mt-8 flex space-x-6 text-sm">
+                <a href="#" class="text-blue-400 hover:text-blue-300 transition">LinkedIn</a>
+                <a href="#" class="text-indigo-400 hover:text-indigo-300 transition">GitHub</a>
+                <a href="#" class="text-purple-400 hover:text-purple-300 transition">Portfolio</a>
+            </div>
+        </div>
+
     </div>
-  </section>
+</section>
 
-  <!-- ROADMAP -->
-  <section class="py-24 px-6 border-t border-white/10">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-8">The Future</h3>
-      <p class="text-gray-400 max-w-2xl mx-auto">
-        We're building more than a product. 
-        We're engineering the next generation academic infrastructure powered by AI.
-      </p>
-    </div>
-  </section>
+<!-- CTA -->
+<section class="text-center py-20 border-t border-white/10">
+    <h3 class="text-3xl font-bold mb-6">
+        Building The Future Starts Today
+    </h3>
+    <p class="text-gray-400 mb-8">
+        Join us in shaping the next generation of digital innovation.
+    </p>
+    <a href="#" 
+       class="px-8 py-3 bg-blue-500 hover:bg-blue-600 transition rounded-full text-sm font-medium">
+        Explore Our Work
+    </a>
+</section>
 
-  <!-- CTA -->
-  <section class="py-24 px-6 text-center">
-    <h3 class="text-3xl font-bold mb-6">Join The Evolution</h3>
-    <p class="text-gray-400 mb-8">Be part of the new intelligent research era.</p>
-    <button class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-medium transition">
-      Explore Learniverse
-    </button>
-  </section>
+<footer class="text-center text-gray-500 text-sm py-8 border-t border-white/10">
+    © 2026 Ryzcle Corp. All rights reserved.
+</footer>
 
 </body>
 </html>
