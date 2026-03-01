@@ -209,6 +209,25 @@
 <footer class="py-8 text-center text-sm text-slate-500 px-4">
   © 2026 Ryzcle Corp. All rights reserved.
 </footer>
-
+<script>
+        AOS.init({ once: true, duration: 900 });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
