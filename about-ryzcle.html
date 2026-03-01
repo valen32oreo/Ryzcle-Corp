@@ -143,31 +143,35 @@
   </div>
 </section>
 
-<!-- FOUNDER SECTION -->
+<!-- FOUNDER SECTION - STYLE LEARNIVERSE (PURE TAILWIND) -->
 <section class="px-4 sm:px-6 lg:px-8 py-12">
-  <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+  <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"> <!-- items-center untuk vertical align -->
 
-    <div class="space-y-6">
-      <div class="grid grid-cols-2 gap-6">
+    <!-- Kolom Kiri: Grid Gambar (Kompak) -->
+    <div class="space-y-4">
+      <!-- Baris 1: Dua gambar kecil -->
+      <div class="grid grid-cols-2 gap-4">
         <img src="images/Portfolio 1.0.PNG"
-             class="rounded-3xl object-cover w-full h-48 sm:h-56 md:h-64"
-             alt="">
+             class="rounded-3xl object-cover w-full h-48 shadow-md"
+             alt="Krisna portrait 1">
         <img src="images/Portfolio 1.0.PNG"
-             class="rounded-3xl object-cover w-full h-48 sm:h-56 md:h-64"
-             alt="">
+             class="rounded-3xl object-cover w-full h-48 shadow-md"
+             alt="Krisna portrait 2">
       </div>
+      <!-- Baris 2: Satu gambar besar/lebar -->
       <img src="images/Portfolio 1.0.PNG"
-           class="rounded-3xl object-cover w-full h-56 sm:h-64 md:h-72"
-           alt="">
+           class="rounded-3xl object-cover w-full h-56 shadow-md"
+           alt="Krisna wide portrait">
     </div>
 
+    <!-- Kolom Kanan: Teks Profil (Otomatis di Tengah karena items-center) -->
     <div>
       <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
         Krisna Valencia Hidayat
       </h2>
 
       <p class="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed">
-        Krisna adalah seorang AI Engineer dan System Architect yang berada
+        Krisna adalah seorang <span class="font-semibold">AI Engineer dan System Architect</span> yang berada
         di balik lahirnya Ryzcle Corp. Perusahaan ini berawal dari kebutuhan
         membangun sistem digital yang scalable, presisi, dan berkelanjutan.
       </p>
@@ -180,9 +184,9 @@
       </p>
 
       <div class="flex gap-6 mt-8 text-sm text-slate-500">
-        <a href="#" class="hover:text-blue-600 transition">GitHub</a>
-        <a href="#" class="hover:text-blue-600 transition">LinkedIn</a>
-        <a href="#" class="hover:text-blue-600 transition">Website</a>
+        <a href="#" class="hover:text-blue-600 transition font-medium">GitHub</a>
+        <a href="#" class="hover:text-blue-600 transition font-medium">LinkedIn</a>
+        <a href="#" class="hover:text-blue-600 transition font-medium">Website</a>
       </div>
     </div>
 
