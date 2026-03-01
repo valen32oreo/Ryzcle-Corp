@@ -1,327 +1,236 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Ryzcle Corp</title>
 
-<!-- SEO -->
-<meta name="description" content="Ryzcle adalah perusahaan induk teknologi yang didirikan oleh Krisna Valencia Hidayat. Ryzcle membawahi Ryzcle Labs dan Ryzcle Technology untuk membangun solusi digital, riset, dan engineering berkelanjutan.">
-<meta name="author" content="Krisna Valencia Hidayat">
-<meta property="og:title" content="Ryzcle - Founded by Krisna Valencia Hidayat">
-<meta property="og:description" content="Ryzcle adalah perusahaan teknologi yang didirikan oleh Krisna Valencia Hidayat dan membawahi divisi Ryzcle Labs serta Ryzcle Technology.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ryzcle - Technology Holding Company">
-<meta name="twitter:description" content="Founded by Krisna Valencia Hidayat, Ryzcle develops innovation through Ryzcle Labs and Ryzcle Technology.">
+    <meta name="description" content="Ryzcle adalah perusahaan induk teknologi yang didirikan oleh Krisna Valencia Hidayat. Ryzcle membawahi Ryzcle Labs dan Ryzcle Technology untuk membangun solusi digital, riset, dan engineering berkelanjutan.">
+    <meta name="author" content="Krisna Valencia Hidayat">
 
-<script src="https://cdn.tailwindcss.com"></script>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<link rel="icon" type="image/png" href="images/Logo 1-Photoroom.png" alt="Ryzcle Logo">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="icon" type="image/png" href="images/Logo 1-Photoroom.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-<style>
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-  .font-headline {
-    font-family: 'Space Grotesk', sans-serif;
-  }
-  .bg-light-grid {
-    background-image:
-      linear-gradient(to right, rgba(226,232,240,0.6) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(226,232,240,0.6) 1px, transparent 1px);
-    background-size: 48px 48px;
-  }
-</style>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Space Grotesk', sans-serif; }
+
+        /* MODERN SQUARE GRID BACKGROUND */
+        .bg-square-grid {
+            background-color: #ffffff;
+            background-image: 
+                linear-gradient(to right, rgba(226, 232, 240, 0.5) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(226, 232, 240, 0.5) 1px, transparent 1px);
+            background-size: 40px 40px; /* Ukuran kotak */
+        }
+
+        /* Fade out mask agar grid menghilang halus di bagian bawah */
+        .grid-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
 </head>
 
-<body class="bg-light-grid overflow-x-hidden">
+<body class="bg-slate-50 overflow-x-hidden">
 
-<!-- NAVBAR -->
-<header
-    x-data="{ open: false, scrolled: false }"
-    x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
-    :class="scrolled ? 'bg-white/80 backdrop-blur border-b' : 'bg-transparent'"
-    class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="fixed inset-0 -z-10 bg-square-grid grid-mask"></div>
 
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <!-- LOGO -->
-        <a href="#home" class="flex items-center gap-3">
-            <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Ryzcle Logo">
-            <span class="font-semibold tracking-wide">Ryzcle Corp.</span>
-        </a>
+    <header
+        x-data="{ open: false, scrolled: false }"
+        x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
+        :class="scrolled ? 'glass-header border-b border-slate-200' : 'bg-transparent'"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
 
-        <!-- DESKTOP MENU -->
-        <ul class="hidden md:flex items-center gap-10 text-sm text-gray-700">
-            <li><a href="index.html" class="hover:text-black transition">Home</a></li>
-            <li><a href="Divisions/ryzcle-labs.html" class="hover:text-black transition">Labs</a></li>
-            <li><a href="Divisions/ryzcle-technology.html" class="hover:text-black transition">Technology</a></li>
-            <li><a href="#footer" class="hover:text-black transition">Contact</a></li>
-        </ul>
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Ryzcle Logo">
+                <span class="font-headline font-bold tracking-tight text-slate-900">Ryzcle Corp.</span>
+            </a>
 
-        <!-- MOBILE BUTTON -->
-        <button @click="open = !open" class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-        </button>
-    </nav>
+            <ul class="hidden md:flex items-center gap-10 text-sm font-medium text-slate-600">
+                <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="Divisions/ryzcle-labs.html" class="hover:text-blue-600 transition">Labs</a></li>
+                <li><a href="Divisions/ryzcle-technology.html" class="hover:text-blue-600 transition">Technology</a></li>
+                <li><a href="#footer" class="hover:text-blue-600 transition">Contact</a></li>
+            </ul>
 
-    <!-- MOBILE MENU -->
-    <div x-show="open" x-transition @click.outside="open = false"
-        class="md:hidden bg-white border-t">
-        <ul class="flex flex-col px-6 py-6 gap-6 text-gray-700">
-            <li><a @click="open=false" href="index.html">Home</a></li>
-            <li><a @click="open=false" href="Divisions/ryzcle-labs.html">Labs</a></li>
-            <li><a @click="open=false" href="Divisions/ryzcle-technology.html">Technology</a></li>
-            <li><a @click="open=false" href="#footer">Contact</a></li>
-        </ul>
-    </div>
-</header>
+            <button @click="open = !open" class="md:hidden text-slate-900">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
 
-<!-- HERO -->
-<section class="px-4 sm:px-6 lg:px-8 pt-32 pb-12 text-center">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="font-headline font-bold text-3xl sm:text-4xl md:text-5xl text-slate-900">
-      Tentang <span class="text-blue-600">Ryzcle Corp</span>
-    </h1>
-    <p class="mt-4 text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed">
-      Kami membangun ekosistem digital melalui presisi engineering dan fondasi teknologi
-      yang mampu tumbuh bersama masa depan.
-    </p>
-  </div>
-</section>
-
-<!-- WHO WE ARE -->
-<section class="px-4 sm:px-6 lg:px-8 py-12">
-  <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-    <div>
-      <img src="./images/Cover LinkedIn 2.png"
-           class="w-full rounded-3xl object-cover"
-           alt="Company">
-    </div>
-
-    <div>
-      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
-        Siapa Itu Ryzcle?
-      </h2>
-      <p class="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed">
-        Ryzcle adalah entitas teknologi yang berfokus pada pengembangan
-        sistem digital scalable, riset inovatif, dan arsitektur
-        yang dirancang untuk pertumbuhan jangka panjang.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- VALUES (NO CARD) -->
-<section class="px-4 sm:px-6 lg:px-8 py-12">
-  <div class="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-
-    <div>
-      <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-900">
-        Visi
-      </h3>
-      <p class="mt-2 text-slate-600 text-sm sm:text-base leading-relaxed">
-        Menciptakan standar baru dalam engineering modern.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-900">
-        Misi
-      </h3>
-      <p class="mt-2 text-slate-600 text-sm sm:text-base leading-relaxed">
-        Mengakselerasi transformasi ide menjadi produk nyata.
-      </p>
-    </div>
-
-    <div>
-      <h3 class="font-headline text-xl sm:text-2xl font-bold text-slate-900">
-        Keunggulan
-      </h3>
-      <p class="mt-2 text-slate-600 text-sm sm:text-base leading-relaxed">
-        Sistem scalable, aman, dan berorientasi pada pengalaman pengguna.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOUNDER SECTION - STYLE LEARNIVERSE (GAMBAR PROPORSONAL) -->
-<section class="px-4 sm:px-6 lg:px-8 py-12">
-  <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-    <!-- Kolom Kiri: Grid Gambar (Proporsional) -->
-    <div class="space-y-4">
-      <div class="grid grid-cols-2 gap-4">
-        <img src="images/Img 1.jpg"
-             class="rounded-3xl object-cover w-full h-40 sm:h-44 md:h-48 shadow-md"
-             alt="Krisna portrait 1">
-        <img src="images/Img 2.jpg"
-             class="rounded-3xl object-cover w-full h-40 sm:h-44 md:h-48 shadow-md"
-             alt="Krisna portrait 2">
-      </div>
-      <img src="images/Img 3.jpg"
-           class="rounded-3xl object-cover w-full h-48 sm:h-52 md:h-56 shadow-md"
-           alt="Krisna wide portrait">
-    </div>
-
-    <!-- Kolom Kanan: Teks Profil -->
-    <div>
-      <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900">
-        Krisna Valencia Hidayat
-      </h2>
-      
-      <!-- Subtitle / Role -->
-      <p class="text-lg text-blue-600 font-medium mt-1">
-        AI Engineer & System Architect
-      </p>
-
-      <p class="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed">
-        Krisna adalah seorang <span class="font-semibold">AI Engineer dan System Architect</span> yang berada
-        di balik lahirnya Ryzcle Corp. Perusahaan ini berawal dari kebutuhan
-        membangun sistem digital yang scalable, presisi, dan berkelanjutan.
-      </p>
-
-      <p class="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed">
-        Awalnya dikembangkan sebagai proyek internal, Ryzcle kemudian tumbuh menjadi
-        entitas teknologi yang berfokus pada arsitektur sistem, pengembangan
-        produk digital, dan inovasi berbasis AI. Dengan visi panjang, Ryzcle
-        dirancang untuk menciptakan fondasi teknologi yang dapat berkembang bersama masa depan.
-      </p>
-
-      <div class="flex items-center gap-6 mt-8">
-        <!-- GitHub -->
-        <a href="https://github.com/valen32oreo" target="_blank" class="text-slate-500 hover:text-gray-900 transition" aria-label="GitHub">
-          <ion-icon name="logo-github" class="w-6 h-6" size="large"></ion-icon>
-        </a>
-        
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/krisnavalen32/" target="_blank" class="text-slate-500 hover:text-blue-600 transition" aria-label="LinkedIn">
-          <ion-icon name="logo-linkedin" class="w-6 h-6" size="large"></ion-icon>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/valenkrsss_" target="_blank" class="text-slate-500 hover:text-pink-600 transition" aria-label="Instagram">
-          <ion-icon name="logo-instagram" class="w-6 h-6" size="large"></ion-icon>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VISION STRIP -->
-<section class="relative w-full overflow-hidden">
-    
-    <img 
-        src="images/Cover - Banner Web.png" 
-        alt="Vision Banner"
-        class="w-full h-auto block"
-    >
-
-    <!-- Text Center -->
-    <div class="absolute inset-0 flex items-center justify-center text-center px-6">
-        <h2 class="text-lg sm:text-2xl md:text-4xl font-semibold text-white drop-shadow-lg">
-            Designing systems today that define tomorrow’s technology.
-        </h2>
-    </div>
-
-</section>
-
-<!-- Footer -->
-<footer id="footer" class="border-t border-gray-200">
-    <div class="max-w-7xl mx-auto px-6 py-16">
-        <!-- GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <!-- BRAND -->
-            <div>
-                <div class="flex items-center gap-3 mb-4">
-                    <img src="images/Logo 1-Photoroom.png" class="w-9" alt="Ryzcle Logo">
-                    <img src="images/Logo 2-Photoroom.png" class="w-9" alt="Ryzcle Logo">
-                    <span class="font-semibold text-lg">Ryzcle Corp.</span>
-                </div>
-                <p class="text-gray-500 text-sm leading-relaxed max-w-sm">
-                    Future-focused engineering and technology brand dedicated to building
-                    sustainable and impactful digital solutions.
-                </p>
-            </div>
-
-            <!-- NAVIGATION -->
-            <div>
-                <h4 class="font-semibold mb-4">Navigation</h4>
-                <ul class="space-y-3 text-sm text-gray-500">
-                    <li><a href="index.html" class="hover:text-gray-900 transition">Home</a></li>
-                </ul>
-            </div>
-
-            <!-- Divisions -->
-            <div>
-                <h4 class="font-semibold mb-4">Divisions</h4>
-                <ul class="space-y-3 text-sm text-gray-500">
-                    <li><a href="Divisions/ryzcle-labs.html" target="_blank" class="hover:text-[#7eaee5] transition">Ryzcle Labs</a></li>
-                    <li><a href="Divisions/ryzcle-technology.html" target="_blank" class="hover:text-[#90e57e] transition">Ryzcle Technology</a></li>
-                </ul>
-            </div>
-
-            <!-- CONTACT / INFO -->
-            <div>
-                <h4 class="font-semibold mb-4">Contact</h4>
-                <ul class="space-y-2 text-sm text-gray-500">
-                    <li>
-                        <a href="mailto:ryzcle.labs@gmail.com"
-                        class="block hover:text-[#7eaee5] transition">
-                        Ryzcle Labs
-                        <span class="block text-xs text-gray-400">
-                            ryzcle.labs@gmail.com
-                        </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:ryzcle.technology@gmail.com"
-                        class="block hover:text-[#90e57e] transition">
-                        Ryzcle Technology
-                        <span class="block text-xs text-gray-400">
-                            ryzcle.technology@gmail.com
-                        </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div x-show="open" x-transition class="md:hidden bg-white border-t p-6 space-y-4 shadow-xl">
+            <a href="index.html" class="block text-slate-600">Home</a>
+            <a href="Divisions/ryzcle-labs.html" class="block text-slate-600">Labs</a>
+            <a href="Divisions/ryzcle-technology.html" class="block text-slate-600">Technology</a>
+            <a href="#footer" class="block text-slate-600">Contact</a>
         </div>
+    </header>
 
-        <!-- BOTTOM -->
-        <div class="mt-16 pt-6 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-400">
-            <p>© 2026 Ryzcle Corp. All rights reserved.</p>
-            <p class="text-xs">
-                Designed with precision & clarity
+    <section class="px-6 pt-40 pb-20 text-center" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-headline font-bold text-4xl md:text-6xl text-slate-900 tracking-tight">
+                Tentang <span class="text-blue-600">Ryzcle Corp</span>
+            </h1>
+            <p class="mt-6 text-slate-500 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                Kami membangun ekosistem digital melalui presisi engineering dan fondasi teknologi yang mampu tumbuh bersama masa depan.
             </p>
         </div>
-    </div>
-</footer>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script>
-        AOS.init({ once: true, duration: 900 });
+    </section>
+
+    <section class="px-6 py-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div data-aos="fade-right">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-blue-100/50 rounded-[2.5rem] -z-10 rotate-2"></div>
+                    <img src="./images/Cover LinkedIn 2.png" class="w-full rounded-[2rem] shadow-2xl" alt="Company">
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-slate-900">Siapa Itu Ryzcle?</h2>
+                <div class="h-1.5 w-20 bg-blue-600 my-6 rounded-full"></div>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    Ryzcle adalah entitas teknologi yang berfokus pada pengembangan sistem digital scalable, riset inovatif, dan arsitektur yang dirancang untuk pertumbuhan jangka panjang.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-20 bg-white/50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h3 class="font-headline text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-sm font-bold">01</span>
+                    Visi
+                </h3>
+                <p class="text-slate-500 leading-relaxed">Menciptakan standar baru dalam engineering modern yang tetap relevan melintasi zaman.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h3 class="font-headline text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-sm font-bold">02</span>
+                    Misi
+                </h3>
+                <p class="text-slate-500 leading-relaxed">Mengakselerasi transformasi ide menjadi produk nyata melalui optimasi workflow engineering.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h3 class="font-headline text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                    <span class="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-sm font-bold">03</span>
+                    Keunggulan
+                </h3>
+                <p class="text-slate-500 leading-relaxed">Sistem scalable, aman, dan dirancang dengan pendekatan user-centric yang mendalam.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-32">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="grid grid-cols-2 gap-4" data-aos="zoom-in">
+                <div class="space-y-4">
+                    <img src="images/Img 1.jpg" class="rounded-3xl object-cover w-full h-64 shadow-lg border-4 border-white" alt="Portrait 1">
+                    <img src="images/Img 2.jpg" class="rounded-3xl object-cover w-full h-48 shadow-lg border-4 border-white" alt="Portrait 2">
+                </div>
+                <div class="pt-12">
+                    <img src="images/Img 3.jpg" class="rounded-3xl object-cover w-full h-full shadow-lg border-4 border-white" alt="Portrait 3">
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <span class="text-blue-600 font-bold tracking-widest uppercase text-sm">The Founder</span>
+                <h2 class="font-headline text-4xl font-bold text-slate-900 mt-2 mb-4">Krisna Valencia Hidayat</h2>
+                <p class="text-xl text-slate-500 font-medium mb-8">AI Engineer & System Architect</p>
+                
+                <div class="space-y-6 text-slate-600 text-lg leading-relaxed italic">
+                    <p>"Krisna adalah seorang AI Engineer dan System Architect yang berada di balik lahirnya Ryzcle Corp. Perusahaan ini berawal dari kebutuhan membangun sistem digital yang scalable dan presisi."</p>
+                    <p class="not-italic">Awalnya dikembangkan sebagai proyek internal, Ryzcle tumbuh menjadi entitas teknologi yang berfokus pada inovasi berbasis AI dan arsitektur produk digital masa depan.</p>
+                </div>
+
+                <div class="flex items-center gap-6 mt-10">
+                    <a href="https://github.com/valen32oreo" target="_blank" class="text-slate-400 hover:text-slate-900 transition transform hover:scale-110">
+                        <ion-icon name="logo-github" size="large"></ion-icon>
+                    </a>
+                    <a href="https://www.linkedin.com/in/krisnavalen32/" target="_blank" class="text-slate-400 hover:text-blue-600 transition transform hover:scale-110">
+                        <ion-icon name="logo-linkedin" size="large"></ion-icon>
+                    </a>
+                    <a href="https://www.instagram.com/valenkrsss_" target="_blank" class="text-slate-400 hover:text-pink-600 transition transform hover:scale-110">
+                        <ion-icon name="logo-instagram" size="large"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-6 mb-24 relative rounded-[3rem] overflow-hidden group">
+        <img src="images/Cover - Banner Web.png" alt="Vision" class="w-full h-[400px] object-cover transition duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center p-8">
+            <h2 class="text-2xl md:text-5xl font-bold text-white text-center max-w-4xl leading-tight drop-shadow-2xl">
+                "Designing systems today that define tomorrow’s technology."
+            </h2>
+        </div>
+    </section>
+
+    <footer id="footer" class="bg-white border-t border-slate-100 pt-20 pb-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Logo">
+                        <span class="font-headline font-bold text-xl">Ryzcle</span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed">
+                        Future-focused engineering and technology brand dedicated to building sustainable digital solutions.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6">Divisions</h4>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a href="Divisions/ryzcle-labs.html" class="hover:text-blue-600 transition">Ryzcle Labs</a></li>
+                        <li><a href="Divisions/ryzcle-technology.html" class="hover:text-blue-600 transition">Ryzcle Technology</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-6">Contact</h4>
+                    <a href="mailto:ryzcle.labs@gmail.com" class="block text-sm text-slate-500 hover:text-blue-600 mb-2 transition">ryzcle.labs@gmail.com</a>
+                    <a href="mailto:ryzcle.technology@gmail.com" class="block text-sm text-slate-500 hover:text-blue-600 transition">ryzcle.technology@gmail.com</a>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-400 text-sm">© 2026 Ryzcle Corp. All rights reserved.</p>
+                <p class="text-slate-300 text-xs font-mono uppercase tracking-widest">Precision & Clarity</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 1000, easing: 'ease-out-quart' });
         
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
                 }
             });
         });
