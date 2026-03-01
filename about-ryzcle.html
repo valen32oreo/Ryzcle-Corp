@@ -31,10 +31,11 @@
 <header
     x-data="{ open: false, scrolled: false }"
     x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
-    :class="scrolled ? 'bg-white/80 backdrop-blur border-b' : 'bg-transparent'"
+    :class="scrolled ? 'bg-white/80 backdrop-blur border-b border-slate-200 shadow-sm' : 'bg-transparent'"
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
 
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
         <!-- LOGO -->
         <a href="#home" class="flex items-center gap-3">
             <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Ryzcle Logo">
@@ -42,7 +43,7 @@
         </a>
 
         <!-- DESKTOP MENU -->
-        <ul class="hidden md:flex items-center gap-10 text-sm text-gray-700">
+        <ul class="hidden md:flex items-center gap-10 text-sm text-slate-700">
             <li><a href="#home" class="hover:text-black transition">Home</a></li>
             <li><a href="#logo" class="hover:text-black transition">Logo</a></li>
             <li><a href="#projects" class="hover:text-black transition">Projects</a></li>
@@ -50,23 +51,29 @@
         </ul>
 
         <!-- MOBILE BUTTON -->
-        <button @click="open = !open" class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        <button @click="open = !open" class="md:hidden focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
+                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2"
                     d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
         </button>
     </nav>
 
     <!-- MOBILE MENU -->
-    <div x-show="open" x-transition @click.outside="open = false"
-        class="md:hidden bg-white border-t">
-        <ul class="flex flex-col px-6 py-6 gap-6 text-gray-700">
+    <div x-show="open"
+         x-transition
+         @click.outside="open = false"
+         class="md:hidden bg-white border-t border-slate-200">
+
+        <ul class="flex flex-col px-6 py-6 gap-6 text-slate-700 text-sm">
             <li><a @click="open=false" href="#home">Home</a></li>
             <li><a @click="open=false" href="#logo">Logo</a></li>
             <li><a @click="open=false" href="#projects">Projects</a></li>
+            <li><a @click="open=false" href="#footer">Contact</a></li>
         </ul>
+
     </div>
 </header>
 
