@@ -196,13 +196,23 @@
         dirancang untuk menciptakan fondasi teknologi yang dapat berkembang bersama masa depan.
       </p>
 
-      <div class="flex gap-6 mt-8 text-sm text-slate-500">
-        <a href="#" class="hover:text-blue-600 transition font-medium">GitHub</a>
-        <a href="#" class="hover:text-blue-600 transition font-medium">LinkedIn</a>
-        <a href="#" class="hover:text-blue-600 transition font-medium">Website</a>
+      <div class="flex items-center gap-6 mt-8">
+        <!-- GitHub -->
+        <a href="#" class="text-slate-500 hover:text-blue-600 transition" aria-label="GitHub">
+          <ion-icon name="logo-github" class="w-6 h-6" size="large"></ion-icon>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="#" class="text-slate-500 hover:text-blue-600 transition" aria-label="LinkedIn">
+          <ion-icon name="logo-linkedin" class="w-6 h-6" size="large"></ion-icon>
+        </a>
+        
+        <!-- Website (menggunakan globe outline) -->
+        <a href="#" class="text-slate-500 hover:text-blue-600 transition" aria-label="Website">
+          <ion-icon name="globe-outline" class="w-6 h-6" size="large"></ion-icon>
+        </a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -294,6 +304,8 @@
         </div>
     </div>
 </footer>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script>
         AOS.init({ once: true, duration: 900 });
         
