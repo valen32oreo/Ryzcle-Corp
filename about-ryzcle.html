@@ -14,14 +14,44 @@
   body {
     font-family: 'Inter', sans-serif;
   }
+  
   .font-headline {
     font-family: 'Space Grotesk', sans-serif;
   }
+
   .bg-light-grid {
     background-image:
       linear-gradient(to right, rgba(226,232,240,0.6) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(226,232,240,0.6) 1px, transparent 1px);
     background-size: 48px 48px;
+  }
+
+  .founder-learniverse .profile-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Memastikan teks di tengah vertikal */
+    height: 100%; /* Mengisi tinggi kolom */
+  }
+
+  .founder-learniverse .image-grid {
+    display: grid;
+    gap: 1rem; /* Jarak antar gambar */
+  }
+
+  /* Membuat gambar lebih kompak dan seragam */
+  .founder-learniverse .image-grid img {
+    width: 100%;
+    height: 200px; /* Atur tinggi gambar agar seragam dan kompak */
+    object-fit: cover; /* Memastikan gambar terpotong rapi agar pas */
+    border-radius: 1.5rem; /* rounded-3xl */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* Sedikit bayangan */
+  }
+
+  /* Pengaturan khusus untuk grid gambar 2 kolom (baris pertama) */
+  .founder-learniverse .grid-cols-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 </style>
 </head>
