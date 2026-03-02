@@ -3,67 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryzcle Corp — System Architecture 2.0</title>
+    <title>Ryzcle Corp — Engineering The Future</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        /* Blueprint Grid Effect */
-        .blueprint-bg {
-            background-color: #ffffff;
-            background-image: 
-                linear-gradient(#e2e8f0 1px, transparent 1px),
-                linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
-            background-size: 40px 40px;
+        .grid-bg {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 30px 30px;
         }
     </style>
 </head>
-<body class="blueprint-bg h-screen w-screen overflow-hidden flex items-center justify-center p-6 font-sans">
+<body class="bg-slate-50 grid-bg min-h-screen flex items-center justify-center p-6 font-sans">
 
-    <div class="absolute inset-4 border border-slate-200 pointer-events-none hidden md:block"></div>
-    <div class="absolute top-8 left-8 font-mono text-[10px] text-slate-400 uppercase tracking-widest hidden md:block">
-        System: Operational // ID: RY-2026
-    </div>
-
-    <div class="max-w-4xl w-full text-center relative z-10" data-aos="fade-up">
+    <div class="max-w-3xl w-full text-center" data-aos="zoom-in">
         <img src="https://valen32oreo.github.io/Ryzcle-Corp/images/Logo%201-Photoroom.png" 
-             alt="Ryzcle Logo" class="mx-auto w-24 md:w-32 mb-10 grayscale opacity-90">
+             alt="Ryzcle Logo" class="mx-auto w-32 mb-12 grayscale opacity-80">
 
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-slate-900 text-white text-[10px] font-bold uppercase tracking-[0.3em] mb-8">
-            <span class="flex h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse"></span>
-            Evolution in Progress
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium mb-8 shadow-sm">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+            </span>
+            New Experience is Live
         </div>
 
-        <h1 class="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter mb-6 leading-none">
-            ENGINEERING <br>
-            <span class="text-blue-600">THE FUTURE.</span>
+        <h1 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-6">
+            RYZCLE CORP <br>
+            <span class="text-blue-600">HAS EVOLVED.</span>
         </h1>
 
-        <p class="text-base md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Ryzcle Corp has migrated to a robust **Laravel-based ecosystem**. 
-            Experience our new AI-driven innovation and structured system architecture.
+        <p class="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed">
+            Our research and internal projects have matured into a robust ecosystem. 
+            Experience the new, AI-driven architecture of <strong>Ryzcle Corp</strong> 
+            built with high-precision engineering.
         </p>
 
-        <div class="flex flex-col items-center gap-6">
-            <a href="URL_WEBSITE_LARAVEL_ANDA" 
-               class="group relative inline-flex items-center justify-center px-10 py-5 bg-blue-600 text-white font-bold uppercase tracking-widest transition-all duration-300 hover:bg-slate-900 shadow-xl shadow-blue-500/20">
-                Access Official Site
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-3 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+        <div class="space-y-4">
+            <a href="URL_WEBSITE_LARAVEL_ANDA_DISINI" 
+               class="inline-block w-full sm:w-auto px-12 py-5 bg-slate-900 text-white font-bold uppercase tracking-widest hover:bg-blue-600 hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 transform hover:-translate-y-1">
+                Visit Official Website
             </a>
-            
-            <p class="text-[10px] font-mono text-slate-400 tracking-[0.4em] uppercase">
-                Redirecting to Production Environment
+            <p class="text-xs text-slate-400 font-mono tracking-widest uppercase mt-6">
+                Redirecting to System Architecture 2.0
             </p>
         </div>
-    </div>
 
-    <div class="absolute bottom-8 right-8 font-mono text-[10px] text-slate-400 text-right hidden md:block">
-        <p>DEPL: CLOUD_RUN</p>
-        <p>AUTH: KRISNA_VALENCIA</p>
+        <div class="mt-20 pt-8 border-t border-slate-200/50 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-[10px] font-mono text-slate-400">© 2026 Ryzcle Corp — All Rights Reserved</p>
+            <div class="flex gap-4">
+                <a href="https://linkedin.com/in/krisna-valencia" class="text-[10px] font-bold text-slate-400 hover:text-blue-600 transition-colors uppercase">LinkedIn</a>
+                <a href="#" class="text-[10px] font-bold text-slate-400 hover:text-blue-600 transition-colors uppercase">Github</a>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1200, once: true });</script>
+    <script>AOS.init({ duration: 1000 });</script>
 </body>
 </html>
