@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ryzcle Corp.</title>
+<title>Ryzcle Corp. | Under Development</title>
 
-<meta name="description" content="Ryzcle adalah perusahaan induk teknologi yang didirikan oleh Krisna Valencia Hidayat. Ryzcle membawahi Ryzcle Labs dan Ryzcle Technology untuk membangun solusi digital, riset, dan engineering berkelanjutan.">
+<meta name="description" content="Ryzcle Corp sedang membangun ekosistem digital masa depan. Solusi berbasis Laravel dan AI sedang dalam tahap pengembangan presisi.">
 <meta name="author" content="Krisna Valencia Hidayat">
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <link rel="icon" type="image/png" href="images/Logo 1-Photoroom.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
 
 <style>
   body {
@@ -22,83 +22,95 @@
   .font-headline {
     font-family: 'Space Grotesk', sans-serif;
   }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
   .bg-light-grid {
     background-image:
       linear-gradient(to right, rgba(226,232,240,0.6) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(226,232,240,0.6) 1px, transparent 1px);
     background-size: 48px 48px;
   }
+  /* Efek loading bar halus */
+  @keyframes progress {
+    0% { width: 0%; }
+    50% { width: 75%; }
+    100% { width: 85%; }
+  }
+  .progress-fill {
+    animation: progress 3s ease-in-out forwards;
+  }
 </style>
 </head>
 
 <body class="bg-light-grid flex flex-col justify-center items-center">
 
-<header
-    x-data="{ open: false, scrolled: false }"
-    x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
-    :class="scrolled ? 'bg-white/80 backdrop-blur border-b' : 'bg-transparent'"
-    class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#home" class="flex items-center gap-3">
-            <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Ryzcle Logo">
-            <span class="font-semibold tracking-wide">Ryzcle Corp.</span>
-        </a>
-
-        <ul class="hidden md:flex items-center gap-10 text-sm text-gray-700 font-medium">
-            <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
-            <li><a href="Divisions/ryzcle-labs.html" class="hover:text-blue-600 transition">Labs</a></li>
-            <li><a href="Divisions/ryzcle-technology.html" class="hover:text-blue-600 transition">Technology</a></li>
-            <li><a href="#footer" class="hover:text-blue-600 transition">Contact</a></li>
-        </ul>
-
-        <button @click="open = !open" class="md:hidden">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-        </button>
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <img src="images/Logo 1-Photoroom.png" class="w-8 grayscale opacity-70" alt="Ryzcle Logo">
+            <span class="font-semibold tracking-wide text-slate-400 text-sm font-mono uppercase">System_Identity: Ryzcle</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <span class="font-mono text-[10px] text-amber-600 font-bold uppercase tracking-widest">Development_Mode</span>
+        </div>
     </nav>
 </header>
 
 <main class="flex flex-col items-center justify-center text-center px-4 w-full">
     
     <section class="max-w-4xl mx-auto flex flex-col items-center">
+        <div class="mb-6 px-3 py-1 border border-slate-200 rounded-full bg-white shadow-sm">
+            <p class="font-mono text-[10px] text-slate-500 uppercase tracking-[0.2em]">Build Phase: v2.0.0-beta</p>
+        </div>
+
         <h1 class="font-headline font-bold text-3xl sm:text-5xl md:text-6xl text-slate-900 leading-tight">
-            SYSTEM OPERATIONAL: <br>
-            <span class="text-blue-600">ARCHITECTURE 2.0 IS LIVE</span>
+            ENGINEERING THE <br>
+            <span class="text-slate-400">NEXT EVOLUTION</span>
         </h1>
         
         <p class="mt-6 text-slate-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
-            <span class="inline-block px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 font-mono text-[0.9em] font-medium">Ryzcle Corp's</span> 
-            new digital ecosystem is now fully operational. Powered by Laravel and engineered for scalability.
+            Sistem utama <span class="font-bold text-slate-900">Ryzcle Corp</span> sedang dalam tahap sinkronisasi infrastruktur. Kami sedang merancang pengalaman digital yang lebih presisi, cepat, dan skalabel.
         </p>
 
+        <div class="mt-10 w-64 space-y-2">
+            <div class="flex justify-between font-mono text-[10px] text-slate-400 uppercase tracking-widest">
+                <span>Core_Modules</span>
+                <span>85%</span>
+            </div>
+            <div class="h-1 w-full bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-600 progress-fill rounded-full"></div>
+            </div>
+        </div>
+
         <div class="mt-10">
-            <a href="https://URL-WEBSITE-LARAVEL-ANDA.com" 
-               class="group inline-flex items-center justify-between group-hover:before:duration-500 group-hover:after:duration-1000 after:duration-500 hover:border-sky-300 duration-500 before:duration-500 hover:duration-500 underline underline-offset-2 hover:after:-right-2 hover:before:top-8 hover:before:right-16 hover:after:scale-150 hover:after:blur-none hover:before:-bottom-8 hover:before:blur-none hover:bg-sky-300 hover:underline hover:underline-offset-4 origin-left hover:decoration-2 hover:text-sky-900 relative bg-sky-800 h-16 w-64 border text-left p-4 text-gray-50 text-base font-bold rounded-lg overflow-hidden before:absolute before:w-12 before:h-12 before:content-[''] before:right-1 before:top-1 before:z-10 before:bg-sky-400 before:rounded-full before:blur-lg after:absolute after:z-10 after:w-20 after:h-20 after:content-[''] after:bg-cyan-600 after:right-8 after:top-3 after:rounded-full after:blur transition-all shadow-2xl no-underline">
-                
-                <span class="relative z-20">VISIT OFFICIAL</span>
-                
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative z-20 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-            </a>
+            <div class="group inline-flex items-center justify-center relative bg-slate-100 h-16 w-64 border border-slate-200 text-slate-400 p-4 text-xs font-bold rounded-lg overflow-hidden cursor-not-allowed uppercase tracking-widest font-mono">
+                System_Encrypted
+            </div>
+            <p class="mt-4 text-[10px] text-slate-400 font-mono uppercase tracking-widest">Akses publik dibuka dalam waktu dekat</p>
         </div>
     </section>
 
-    <section class="mt-12 max-w-2xl w-full px-6">
-        <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur opacity-25"></div>
-            
+    <section class="mt-12 max-w-2xl w-full px-6 opacity-40 grayscale">
+        <div class="relative">
+            <div class="absolute inset-0 flex items-center justify-center z-10">
+                <div class="px-4 py-2 border border-slate-400/30 backdrop-blur-sm bg-white/10 rounded text-slate-500 font-mono text-xs uppercase tracking-[0.3em]">
+                    Draft_Review
+                </div>
+            </div>
             <img src="./images/Cover LinkedIn 2.png"
-                class="relative w-full rounded-2xl shadow-2xl border border-slate-200 object-cover"
-                alt="Ryzcle Corp System">
+                class="w-full rounded-2xl border border-dashed border-slate-300 object-cover"
+                alt="Architecture Preview">
         </div>
     </section>
 </main>
 
-<footer class="fixed bottom-6 text-slate-400 text-[10px] font-mono tracking-widest uppercase">
-    © 2026 Ryzcle Corp. | High-Precision Engineering
+<footer class="fixed bottom-6 text-slate-300 text-[9px] font-mono tracking-[0.3em] uppercase">
+    Initial_Commit // 2026 // Ryzcle_Architecture
 </footer>
 
 </body>
