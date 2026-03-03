@@ -34,30 +34,35 @@
 <body class="bg-light-grid flex flex-col justify-center items-center">
 
 <header
-    x-data="{ open: false, scrolled: false }"
-    x-init="window.addEventListener('scroll', () => scrolled = window.scrollY > 20)"
-    :class="scrolled ? 'bg-white/80 backdrop-blur border-b' : 'bg-transparent'"
+    :class="open ? 'bg-white shadow-md' : 'bg-transparent'"
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#home" class="flex items-center gap-3">
-            <img src="images/Logo 1-Photoroom.png" class="w-8" alt="Ryzcle Logo">
-            <span class="font-semibold tracking-wide">Ryzcle Corp.</span>
+    <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="javascript:void(0)" class="flex items-center gap-3">
+            <img src="images/Logo 1-Photoroom.png" class="w-7 md:w-8" alt="Ryzcle Logo">
+            <span class="font-semibold tracking-wide text-slate-900">Ryzcle Corp.</span>
         </a>
 
         <ul class="hidden md:flex items-center gap-10 text-sm text-gray-700 font-medium">
-            <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
-            <li><a href="Divisions/ryzcle-labs.html" class="hover:text-blue-600 transition">Labs</a></li>
-            <li><a href="Divisions/ryzcle-technology.html" class="hover:text-blue-600 transition">Technology</a></li>
-            <li><a href="#footer" class="hover:text-blue-600 transition">Contact</a></li>
+            <li><a href="main-page.html" target="_blank" class="hover:text-blue-600 transition">Home</a></li>
+            <li><a href="Divisions/ryzcle-labs.html" target="_blank" class="hover:text-blue-600 transition">Labs</a></li>
+            <li><a href="Divisions/ryzcle-technology.html" target="_blank" class="hover:text-blue-600 transition">Technology</a></li>
         </ul>
 
-        <button @click="open = !open" class="md:hidden">
+        <button @click="open = !open" class="md:hidden text-slate-900 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
         </button>
     </nav>
+
+    <div x-show="open" x-transition class="absolute top-full left-0 w-full bg-white border-b shadow-xl md:hidden">
+        <ul class="flex flex-col p-6 gap-4 text-gray-700 font-medium text-center">
+            <li><a href="main-page.html" class="block py-2">Home</a></li>
+            <li><a href="Divisions/ryzcle-labs.html" class="block py-2">Labs</a></li>
+            <li><a href="Divisions/ryzcle-technology.html" class="block py-2">Technology</a></li>
+        </ul>
+    </div>
 </header>
 
 <main class="flex flex-col items-center justify-center text-center px-4 w-full">
@@ -120,6 +125,10 @@
 <footer class="fixed bottom-6 text-slate-400 text-[10px] font-mono tracking-widest uppercase">
     © 2026 Ryzcle Corp. | High-Precision Engineering
 </footer>
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ once: true, duration: 900 });
+</script>
 </body>
 </html>
