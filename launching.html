@@ -74,26 +74,36 @@
         </p>
 
         <div class="mt-10">
-            <a href="https://URL-WEBSITE-LARAVEL-ANDA.com" 
-            class="group inline-flex items-center justify-between relative h-16 w-64 p-4 rounded-lg overflow-hidden border transition-all duration-500 shadow-2xl no-underline font-bold text-base text-gray-50
-                    /* Warna Dasar Biru */
-                    bg-[#7eaee5] border-[#7eaee5]/20
-                    /* Efek Hover ke Hijau */
-                    hover:bg-[#90e57e] hover:text-[#2d4d26] hover:border-[#90e57e]
-                    /* Logika Animasi Pseudo-elements */
-                    group-hover:before:duration-500 group-hover:after:duration-1000 after:duration-500 before:duration-500
-                    hover:after:-right-2 hover:before:top-8 hover:before:right-16 hover:after:scale-150 hover:after:blur-none hover:before:-bottom-8 hover:before:blur-none
-                    /* Dekorasi Lingkaran (Glow) */
-                    before:absolute before:w-12 before:h-12 before:content-[''] before:right-1 before:top-1 before:z-10 before:bg-white/20 before:rounded-full before:blur-lg 
-                    after:absolute after:z-10 after:w-20 after:h-20 after:content-[''] after:bg-[#90e57e]/40 after:right-8 after:top-3 after:rounded-full after:blur">
-                
-                <span class="relative z-20">VISIT OFFICIAL</span>
-                
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative z-20 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-            </a>
-        </div>
+    <a href="https://URL-WEBSITE-LARAVEL-ANDA.com" 
+       class="group inline-flex items-center justify-between relative h-16 w-64 p-4 rounded-lg overflow-hidden border transition-all duration-500 shadow-2xl no-underline font-bold text-base
+              /* State Default: Biru */
+              bg-[#7eaee5] text-white border-[#7eaee5]/20
+              /* State Hover: Hijau */
+              hover:bg-[#90e57e] hover:text-[#2d4d26] hover:border-[#90e57e]
+
+              /* BOLA KECIL (Before) - Transisi Smooth */
+              before:absolute before:w-12 before:h-12 before:content-[''] before:right-1 before:top-1 before:z-10 before:rounded-full before:blur-lg 
+              before:transition-all before:duration-500
+              before:bg-[#b0d1f7] /* Biru Muda */
+              hover:before:bg-[#c2f2b7] /* Hijau Muda */
+              
+              /* BOLA BESAR (After) - Transisi Smooth */
+              after:absolute after:z-10 after:w-20 after:h-20 after:content-[''] after:right-8 after:top-3 after:rounded-full after:blur 
+              after:transition-all after:duration-500
+              after:bg-[#5a8cc7] /* Biru Tua */
+              hover:after:bg-[#6ab35a] /* Hijau Tua */
+
+              /* Animasi Pergerakan Posisi */
+              group-hover:before:duration-500 group-hover:after:duration-1000 
+              hover:after:-right-2 hover:before:top-8 hover:before:right-16 hover:after:scale-150 hover:after:blur-none hover:before:-bottom-8 hover:before:blur-none">
+        
+        <span class="relative z-20 uppercase tracking-wide">Visit Official</span>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative z-20 transform transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+    </a>
+</div>
     </section>
 
     <section class="mt-12 max-w-2xl w-full px-6">
